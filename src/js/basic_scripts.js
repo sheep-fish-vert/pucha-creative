@@ -161,7 +161,7 @@ function fullPage(){
         //Navigation
         //menu: '#menu',
         //lockAnchors: false,
-        //anchors:['main', 'services','portfolio','our-team','contacts'],
+        anchors:['main', 'services','portfolio','our-team','contacts'],
         navigation: false,
         navigationPosition: 'right',
         //navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -182,11 +182,11 @@ function fullPage(){
         //loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        //normalScrollElements: '#element1, .element2',
+
         scrollOverflow: false,
         //scrollOverflowOptions: null,
         //touchSensitivity: 15,
-        //normalScrollElementTouchThreshold: 5,
+        normalScrollElementTouchThreshold: 5,
 
         //Accessibility
         keyboardScrolling: true,
@@ -204,7 +204,7 @@ function fullPage(){
         responsiveHeight: 0,
 
         //Custom selectors
-        sectionSelector: 'section',
+        sectionSelector: '.section',
         //slideSelector: '.slide',
 
         //events
