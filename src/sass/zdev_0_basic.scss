@@ -95,11 +95,28 @@ input, textarea{
     }
 }
 
-@include font-face('ProximaNova', 'Proxima-Nova-Regular');
-@include font-face('ProximaNova', 'Proxima-Nova-Bold', 700);
-@include font-face('ProximaNova', 'Proxima-Nova-Black', 800);
+@include font-face('Proxima Nova', 'Proxima-Nova-Regular');
+@include font-face('Proxima Nova', 'Proxima-Nova-Bold', 700);
+@include font-face('Proxima Nova', 'Proxima-Nova-Black', 800);
+@include font-face('Proxima Nova', 'Proxima Nova Light', 300);
 
 //  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
 
+.Креативная_веб_студия_по_городу_Астана__Поможет {
+  font-size: 10px;
+  font-family: "Proxima Nova";
+  color: rgba(255, 255, 255, 0.902);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 1.9480704832463,0,0,1.94718177951594,0,0);
+  -webkit-transform: matrix( 1.9480704832463,0,0,1.94718177951594,0,0);
+  -ms-transform: matrix( 1.9480704832463,0,0,1.94718177951594,0,0);
+  position: absolute;
+  left: 815.709px;
+  top: 739.166px;
+  width: 361.989px;
+  height: 33.125px;
+  z-index: 37;
+}
 
 /*/fonts*/
