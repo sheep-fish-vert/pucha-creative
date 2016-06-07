@@ -160,14 +160,14 @@ function fullPage(){
     $('.fullpage').fullpage({
         //Navigation
         menu: '#menu',
-        lockAnchors: false,
-        anchors:['main', 'services','portfolio','our-team','contacts'],
+        //lockAnchors: false,
+        //anchors:['main', 'services','portfolio','our-team','contacts'],
         navigation: false,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
+        //navigationTooltips: ['firstSlide', 'secondSlide'],
         showActiveTooltip: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+        //slidesNavigation: true,
+        //slidesNavPosition: 'bottom',
 
         //Scrolling
         //css3: true,
@@ -186,7 +186,7 @@ function fullPage(){
         scrollOverflow: false,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
+        //normalScrollElementTouchThreshold: 5,
 
         //Accessibility
         keyboardScrolling: true,
