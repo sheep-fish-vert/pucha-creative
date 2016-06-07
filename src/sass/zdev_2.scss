@@ -26,7 +26,7 @@
 .contacts{ background-image: url(../images/contact-bg.jpg);
     .mbox{max-width: 960px; padding: 0 20px; margin: 0 auto; 
         .map{ position: relative; float: right;
-            svg{width: 550px; height: 310px; position: absolute; top: 0; pointer-events: none; }
+            svg{width: 550px; height: 310px; position: absolute; top: 0; pointer-events: none; right: 0;}
         }
     }
 }
