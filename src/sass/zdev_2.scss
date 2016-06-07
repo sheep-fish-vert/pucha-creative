@@ -1,0 +1,33 @@
+/* contacts */
+
+#map-canvas {
+  height: 310px;
+  width: 550px;
+  margin: 0;
+  padding: 0;
+  cursor: default !important;
+}
+
+#map-canvas {
+  -webkit-clip-path: url(#chopChop);
+  -moz-clip-path: url(#chopChop);
+  -ms-clip-path: url(#chopChop);
+  clip-path: url(#chopChop);
+}
+#map-canvas .gm-style > div:nth-child(2) {
+  bottom: 30px !important;
+  left: 195px !important;
+}
+#map-canvas .gm-style > div:nth-child(2):div div {
+  cursor: default;
+}
+
+
+.contacts{ background-image: url(../images/contact-bg.jpg);
+    .mbox{max-width: 960px; padding: 0 20px; margin: 0 auto; 
+        .map{ position: relative; float: right;
+            svg{width: 550px; height: 310px; position: absolute; top: 0; pointer-events: none; right: 0;}
+        }
+    }
+}
+
