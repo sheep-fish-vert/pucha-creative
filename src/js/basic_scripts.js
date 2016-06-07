@@ -159,7 +159,7 @@ function headeButer(menuMobile,toggleMenu){
 function fullPage(){
     $('.fullpage').fullpage({
         //Navigation
-        menu: '#menu',
+        //menu: '#menu',
         //lockAnchors: false,
         //anchors:['main', 'services','portfolio','our-team','contacts'],
         navigation: false,
@@ -173,19 +173,19 @@ function fullPage(){
         //css3: true,
         scrollingSpeed: 700,
         //autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: false,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
+        //fitToSection: true,
+        //fitToSectionDelay: 1000,
+        //scrollBar: false,
+       // easing: 'easeInOutCubic',
+        //easingcss3: 'ease',
         //loopBottom: false,
         //loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
         //normalScrollElements: '#element1, .element2',
         scrollOverflow: false,
-        scrollOverflowOptions: null,
-        touchSensitivity: 15,
+        //scrollOverflowOptions: null,
+        //touchSensitivity: 15,
         //normalScrollElementTouchThreshold: 5,
 
         //Accessibility
