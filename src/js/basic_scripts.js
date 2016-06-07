@@ -157,11 +157,14 @@ function headeButer(menuMobile,toggleMenu){
 /* /expresion for numbers with spaces */
 
 function fullPage(){
+
+    var header = $('.header').outerHeight();
+
     $('.fullpage').fullpage({
         //Navigation
         //menu: '#menu',
         //lockAnchors: false,
-        anchors:['main', 'services','portfolio','our-team','contacts'],
+        anchors:['main', 'services','portfolio','our_team','contacts'],
         navigation: false,
         navigationPosition: 'right',
         //navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -197,7 +200,7 @@ function fullPage(){
         controlArrows: true,
         verticalCentered: true,
         //sectionsColor : ['#ccc', '#fff'],
-        //paddingTop: '3em',
+        paddingTop: header+"px",
         //paddingBottom: '10px',
         fixedElements: '.header, .footer',
         responsiveWidth: 0,
