@@ -195,6 +195,13 @@ function Maskedinput(){
     if($('.tel-mask')){
         $('.tel-mask').mask('+9 (999) 999-99-99 ');
     }
+    if($('.tel-mask1')){
+        $('.tel-mask1').mask('+9(999)');
+    }
+
+    if($('.pronto2')){
+        $('.pronto2').mask('999-99-99');
+    }
 }
 
 /*fansybox на форме*/
@@ -264,6 +271,9 @@ function someAjax(item, someUrl, successFunc, someData){
 */
 
 $(document).ready(function(){
+
+    
+    validate('.contact', {submitFunction:validationCall});
 
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    Maskedinput();

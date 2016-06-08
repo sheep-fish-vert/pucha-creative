@@ -103,6 +103,9 @@ input, textarea{
 @include font-face('Proxima Nova', 'Proxima-Nova-Black', 800);
 @include font-face('Proxima Nova', 'Proxima Nova Light', 300);
 
+@include font-face('PFAgoraSansPro', 'AgoraSansProXThin', 100);
+@include font-face('PFAgoraSansPro', 'PFAgoraSansPro-XThinItalic', 100, italic);
+
 //  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
 
 /*/fonts*/
