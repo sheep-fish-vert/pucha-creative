@@ -36,7 +36,7 @@ $pup:#864ad0;
     .header-nav{
         ol{list-style-type: none;margin:0;padding:0;display: flex;}
         li{margin:0 28px;}
-        a{text-decoration: none;font-size: 19px;font-family: 'Roboto';font-weight: bold;position: relative;
+        a{text-decoration: none;font-size: 19px;font-family: 'Roboto';font-weight: bold;position: relative;color: white;
             &:after{position: absolute;content: attr(data-count);color: rgba(255,255,255,.3);font-family: "Roboto";font-weight: 300;font-size: 14px;left: 0;top: -26px;}
         }
     }
