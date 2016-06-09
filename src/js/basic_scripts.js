@@ -194,7 +194,7 @@ function fullPage(){
         //keyboardScrolling: true,
         //animateAnchor: true,
         //recordHistory: true,
-        scrollOverflow: true,
+        scrollOverflow: false,
         responsiveWidth: 0,
         responsiveHeight: 0,
         loopTop: false,
