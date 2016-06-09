@@ -165,12 +165,6 @@ function fullPage(){
         menu: '.header-list ol',
         //lockAnchors: false,
         anchors:['main', 'services','portfolio','our_team','contacts'],
-        //navigationPosition: 'right',
-        //navigationTooltips: ['firstSlide', 'secondSlide'],
-        //navigation: true,
-        //showActiveTooltip: true,
-        //slidesNavigation: true,
-        //slidesNavPosition: 'bottom',
 
         //Scrolling
         //css3: true,
@@ -179,10 +173,6 @@ function fullPage(){
         //fitToSection: true,
         //fitToSectionDelay: 1000,
         scrollBar: false,
-       // easing: 'easeInOutCubic',
-        //easingcss3: 'ease',
-        //loopBottom: false,
-        //loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
 
@@ -202,24 +192,31 @@ function fullPage(){
         //Design
         controlArrows: true,
         verticalCentered: true,
-        //sectionsColor : ['#ccc', '#fff'],
         paddingTop: header+"px",
         //paddingBottom: '10px',
         fixedElements: '.header, .footer',
 
         //Custom selectors
         sectionSelector: '.section',
-        //slideSelector: '.slide',
 
         //events
         onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
+        afterLoad: function(anchorLink, index){
+            if(index == 1){
+                $('.footer').addClass('top');
+            }else{
+                $('.footer').removeClass('top');
+            }
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
+    $('.scroll-down').click(function(event) {
+        $.fn.fullpage.moveSectionDown();
+    });
 }
 
 
