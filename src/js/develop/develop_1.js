@@ -20,7 +20,6 @@
                     var scaleHeight = itemHeight * scalePerc;
                     var topTransform = (itemHeight - scaleHeight)/2;
                     $(this).css({'transform':'scale('+scalePerc+') translateZ(0px)', 'margin-top':'-'+topTransform+'px'});
-                    console.log(itemHeight +' - '+scaleHeight+' - '+headerHeight);
                 }
 
             });
