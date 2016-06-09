@@ -49,7 +49,7 @@ function animationBlock(item){
         var bottomCheck = $(window).height()+$(window).scrollTop();
         var windowTop = $(window).scrollTop()+($(window).height()/1.5);
 
-        
+
         item.each(function(){
            if(windowTop>$(this).offset().top || bottomCheck > $('body').height()*0.95){
 
@@ -174,7 +174,7 @@ function fullPage(){
             //Navigation
             menu: '.header-list ol',
             //lockAnchors: false,
-            anchors:['main', 'services','portfolio','our_team','contacts'],
+            anchors:['main', 'services','portfolio','our-team','contacts'],
 
             //Scrolling
             //css3: true,
@@ -256,7 +256,7 @@ $(document).ready(function() {
     if ($(window).width() > 1024) {
         fullPage();
     }
-    
+
 });
 
 $(window).resize(function() {
