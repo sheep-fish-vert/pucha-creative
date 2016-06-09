@@ -4,7 +4,7 @@ jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 
-var scroller=jQuery.browser.webkit ? "body": "html";
+// var scroller=jQuery.browser.webkit ? "body": "html";
 
 $.scrollbarWidth=function(){var a,b,c;if(c===undefined){a=$('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');b=a.children();c=b.innerWidth()-b.height(99).innerWidth();a.remove()}return c};
 
@@ -162,15 +162,9 @@ function fullPage(){
 
     $('.fullpage').fullpage({
         //Navigation
-        //menu: '#menu',
+        menu: '.header-list ol',
         //lockAnchors: false,
         anchors:['main', 'services','portfolio','our_team','contacts'],
-        navigation: false,
-        navigationPosition: 'right',
-        //navigationTooltips: ['firstSlide', 'secondSlide'],
-        showActiveTooltip: false,
-        //slidesNavigation: true,
-        //slidesNavPosition: 'bottom',
 
         //Scrolling
         //css3: true,
@@ -178,47 +172,51 @@ function fullPage(){
         //autoScrolling: true,
         //fitToSection: true,
         //fitToSectionDelay: 1000,
-        //scrollBar: false,
-       // easing: 'easeInOutCubic',
-        //easingcss3: 'ease',
-        //loopBottom: false,
-        //loopTop: false,
+        scrollBar: false,
         loopHorizontal: true,
         continuousVertical: false,
 
-        scrollOverflow: false,
         //scrollOverflowOptions: null,
         //touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
+        //normalScrollElementTouchThreshold: 5,
 
         //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
+        //keyboardScrolling: true,
+        //animateAnchor: true,
+        //recordHistory: true,
+        scrollOverflow: false,
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        loopTop: false,
 
         //Design
         controlArrows: true,
         verticalCentered: true,
-        //sectionsColor : ['#ccc', '#fff'],
         paddingTop: header+"px",
         //paddingBottom: '10px',
         fixedElements: '.header, .footer',
-        responsiveWidth: 0,
-        responsiveHeight: 0,
 
         //Custom selectors
         sectionSelector: '.section',
-        //slideSelector: '.slide',
 
         //events
         onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
+        afterLoad: function(anchorLink, index){
+            if(index == 1){
+                $('.footer').addClass('top');
+            }else{
+                $('.footer').removeClass('top');
+            }
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
+    $('.scroll-down').click(function(event) {
+        $.fn.fullpage.moveSectionDown();
+    });
 }
 
 
@@ -226,11 +224,12 @@ function fullPage(){
 /* DOCUMENT READY  */
 $(document).ready(function() {
     //oneHeightItems();
-    fullPage();
-    //goTo();
     //animationBlock($('.setion-animate'));
 });
 
 $(window).resize(function() {
 
+});
+$(document).ready(function() {
+     fullPage();
 });
