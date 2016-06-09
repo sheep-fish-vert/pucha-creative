@@ -2,15 +2,19 @@
 
     .our-team{background-image:url(../images/out-team-bg.jpg);background-size: cover;
 
-        .conteiner{width: 100%;padding-top: 140px;}
+        .mbox{max-width: 1205px;}
+
+        .conteiner{width: 100%;padding-top: 152px;}
 
         .our-team-wrap{display: flex;justify-content: space-between;
 
-            .title-small{color:#fff;font-size: 19px;font-weight: 300;margin-bottom: 10px;}
+            .title-small{color:#fff;font-size: 19px;font-weight: 300;margin-bottom: 10px;margin-bottom: 24px;}
             .title{font-size: 60px;font-weight: 900;text-transform: uppercase;color:#fff;margin: 0 0 45px 0;
                 span{color:#864ad0;}
             }
-            .descript{font-size: 19px;color:#4c4947;font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style:italic;max-width: 280px;text-shadow:0 0 0 rgba(255,255,255, .25);}
+            .descript{font-size: 19px;color:#4c4947;font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style:italic;max-width: 280px;text-shadow:0 0 0 rgba(255,255,255, .25);margin-bottom: 60px;}
+
+            .left-column{padding-top: 100px;}
 
             .slider-block{
                 .slider-fotos{position: absolute;top:0;left:420px;width: 526px;}
@@ -23,6 +27,17 @@
                 .slider-fotos-wrap{margin-bottom: 16px;
                     .slider-foto-item{
                         img{margin: 0 auto;}
+                    }
+                }
+
+                .slider-item-descript{position: relative;
+                    .slider-item-descript-wrap{position: absolute;transition:absolute;width: 372px;min-height: 254px;padding:25px 17px 40px 29px;background-color: rgba(0, 0, 0, .84);font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style: italic;z-index:0;opacity:1;transition:opacity 300ms ease;
+                        &.active{opacity: 1;z-index: 1;}
+
+                        .slider-item-descript-name{font-size: 18px;color:#fff;text-align: center;}
+                        .slider-item-descript-position{color:#864ad0;font-size: 13px;text-align: center;margin-bottom: 13px;}
+                        .slider-item-descript-text{font-size: 12px;color: #fff;line-height: 1.25;}
+                        .slider-item-descript-login{position:absolute;color:#fff;bottom:20px;right: 17px;}
                     }
                 }
 
