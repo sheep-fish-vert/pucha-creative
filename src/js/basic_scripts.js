@@ -157,6 +157,7 @@ function headeButer(menuMobile,toggleMenu){
 /* /expresion for numbers with spaces */
 
 
+
 var fullPageCreated = false;
 
 function fullPage(){

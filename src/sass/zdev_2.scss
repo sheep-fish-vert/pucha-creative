@@ -1,105 +1,120 @@
 /* contacts */
 
-#map-canvas {
-  height: 310px;
-  width: 550px;
-  margin: 0;
-  padding: 0;
-  cursor: default !important;
-}
+    #map-canvas {
+    height: 310px;
+    width: 550px;
+    margin: 0;
+    padding: 0;
+    cursor: default !important;
+    }
 
-#map-canvas {
-  -webkit-clip-path: url(#chopChop);
-  -moz-clip-path: url(#chopChop);
-  -ms-clip-path: url(#chopChop);
-  clip-path: url(#chopChop);
-}
-#map-canvas .gm-style > div:nth-child(2) {
-  bottom: 30px !important;
-  left: 195px !important;
-}
-#map-canvas .gm-style > div:nth-child(2):div div {
-  cursor: default;
-}
+    #map-canvas {
+    -webkit-clip-path: url(#chopChop);
+    -moz-clip-path: url(#chopChop);
+    -ms-clip-path: url(#chopChop);
+    clip-path: url(#chopChop);
+    }
+    #map-canvas .gm-style > div:nth-child(2) {
+    bottom: 30px !important;
+    left: 195px !important;
+    }
+    #map-canvas .gm-style > div:nth-child(2):div div {
+    cursor: default;
+    }
 
 
-.contacts{ background-image: url(../images/contact-bg.jpg); 
-    .conteiner{padding-top: 135px;}
-    .mbox{max-width: 960px; padding: 0 20px; margin: 0 auto;  text-align: left;
-        .top-part{padding-bottom: 15px;}
-        .map{ position: relative; float: right; margin-top: -100px;
-            svg{width: 550px; height: 310px; position: absolute; top: 0; pointer-events: none; right: 0;}
-        }
-        .title{ text-align: left; padding-bottom: 55px;
-          h2{font-family: "ProximaNova", sans-serif; color: rgb(134, 74, 208); font-weight: bold; line-height: 1.2; font-size: 61px; text-transform: uppercase; margin: 0; }
-        }
-        .sutext{ line-height: 1.75; font-family: "PFAgoraSansPro", sans-serif; font-size: 15px; font-style: italic; text-align: left; color: white; font-variant: small-caps; }
-        .mobile{display: none;}
-        .pointers{ padding-top: 20px;
-            ul{ list-style: none; padding: 0;
-              li{padding-left: 37px; position: relative; padding-top: 10px; padding-bottom: 0px;
-                  a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 14px;   font-style: italic; font-variant: small-caps; line-height: 1.75;
-                      &:before{content: ''; background-image: url(../images/marker.png); width: 24px; height: 30px; background-position: center; position: absolute; left: 0; bottom: 0; }
-                  }
-                  
-              }
+    .contacts{ background-image: url(../images/contact-bg.jpg); background-size: cover;
+        .conteiner{padding-top: 135px;}
+        .mbox{max-width: 960px; padding: 0 20px; margin: 0 auto;  text-align: left;
+            .top-part{padding-bottom: 15px;}
+            .map{ position: relative; float: right; margin-top: -100px;
+                svg{width: 550px; height: 310px; position: absolute; top: 0; pointer-events: none; right: 0;}
             }
-        }
-        .bottom-part{display: flex; align-items: stretch; justify-content: space-between; 
-            .qestion{width: 290px; text-align: left; display: flex; align-items: center; position: relative;
-                &:before{content: ''; position: absolute; left: 30%; right: 30%; height: 7px; top: 30px; background-color: white; }
-                .head{ font-size: 21px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps;  font-weight: 300; line-height: 1.2; padding-bottom: 25px;}
-                .practical{ font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps;  font-weight: 300; line-height: 1.2; padding-bottom: 25px;
-                    img{ display: inline-block;}
-                    .af{margin: 0; display: inline-block; vertical-align: top; margin-left: 30px;}
-                }
-                .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.29);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 18px;}
+            .title{ text-align: left; padding-bottom: 55px;
+            h2{font-family: "ProximaNova", sans-serif; color: rgb(134, 74, 208); font-weight: bold; line-height: 1.2; font-size: 61px; text-transform: uppercase; margin: 0; }
             }
-            .form{width: calc(100% - 320px); padding: 37px 44px; border: 3px dotted #864ad0;
-                .contact-form-title{width: 100%; padding-bottom: 20px;
-                    h5{margin: 0;  font-size: 26px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps;  line-height: 1.2;  letter-spacing: 2px;
-                        span{color: #864ad0; }
+            .sutext{ line-height: 1.75; font-family: "PFAgoraSansPro", sans-serif; font-size: 15px; font-style: italic; text-align: left; color: white; font-variant: small-caps; }
+            .mobile{display: none;}
+            .pointers{ padding-top: 20px;
+                ul{ list-style: none; padding: 0;
+                li{padding-left: 37px; position: relative; padding-top: 10px; padding-bottom: 0px;
+                    a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 14px;   font-style: italic; font-variant: small-caps; line-height: 1.75;
+                        &:before{content: ''; background-image: url(../images/marker.png); width: 24px; height: 30px; background-position: center; position: absolute; left: 0; bottom: 0; }
                     }
-                }
-                .contact-form-row{padding-bottom: 20px;
-                    .contact-form-item{ width: 100%; max-width: 47%; float: left;
-                        &:nth-child(2){float: right;}
-                        .form_input{
-                            p{ font-size: 12px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps; line-height: 1.2; font-weight: 500; padding-bottom: 10px; transition: all 0.3s; box-shadow: none; }
-                            input{ width: 100%; border: none; border-radius: 6px; background-color: white; height: 36px; padding-left: 10px; font-size: 16px; font-family: "ProximaNova", sans-serif; color: rgba(0, 0, 0, 0.91); font-variant: small-caps;line-height: 1.2;}
-                            .errorText{display: none !important;}
                     
-                            .convert{ 
-                                .pronto1{width: 33%; float: left; }
-                                .pronto2{width: 58%; float: right; }
-                            }
-                            span{ font-size: 14px; font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.278); font-style: italic;  font-variant: small-caps; line-height: 1.2; font-weight: 100; padding-top: 5px; display: block;}
-                        }
-                        .error{
-                            p{color: red;}
-                            input{box-shadow: inset 0px 0px 5px 1px rgba(255,0,0,1);}
+                }
+                }
+            }
+            .bottom-part{display: flex; align-items: stretch; justify-content: space-between; 
+                .qestion{width: 290px; text-align: left; display: flex; align-items: center; position: relative;
+                    &:before{content: ''; position: absolute; left: 30%; right: 30%; height: 7px; top: 30px; background-color: white; }
+                    .head{ font-size: 21px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps;  font-weight: 300; line-height: 1.2; padding-bottom: 25px;}
+                    .practical{ font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps;  font-weight: 300; line-height: 1.2; padding-bottom: 25px;
+                        img{ display: inline-block;}
+                        .af{margin: 0; display: inline-block; vertical-align: top; margin-left: 30px;}
+                    }
+                    .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.29);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 18px;}
+                }
+                .form{width: calc(100% - 320px); padding: 37px 44px; border: 3px dotted #864ad0;
+                    .contact-form-title{width: 100%; padding-bottom: 20px;
+                        h5{margin: 0;  font-size: 26px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps;  line-height: 1.2;  letter-spacing: 2px;
+                            span{color: #864ad0; }
                         }
                     }
-                }
-                .contact-form-row-submit{
-                    button{width: 135px; height: 35px; text-align: center; border: none; border-radius: 6px; background-color: #864ad0; transition: all 0.3s;
-                        span{line-height: 35px; font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255);  font-variant: small-caps; line-height: 1.2; text-transform: uppercase;}
-                        &:hover{ background-color:#652CAB; }
+                    .contact-form-row{padding-bottom: 20px;
+                        .contact-form-item{ width: 100%; max-width: 47%; float: left;
+                            &:nth-child(2){float: right;}
+                            .form_input{
+                                p{ font-size: 12px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps; line-height: 1.2; font-weight: 500; padding-bottom: 10px; transition: all 0.3s; box-shadow: none; }
+                                input{ width: 100%; border: none; border-radius: 6px; background-color: white; height: 36px; padding-left: 10px; font-size: 16px; font-family: "ProximaNova", sans-serif; color: rgba(0, 0, 0, 0.91); font-variant: small-caps;line-height: 1.2;}
+                                .errorText{display: none !important;}
+                        
+                                .convert{ 
+                                    .pronto1{width: 33%; float: left; }
+                                    .pronto2{width: 58%; float: right; }
+                                }
+                                span{ font-size: 14px; font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.278); font-style: italic;  font-variant: small-caps; line-height: 1.2; font-weight: 100; padding-top: 5px; display: block;}
+                            }
+                            .error{
+                                p{color: red;}
+                                input{box-shadow: inset 0px 0px 5px 1px rgba(255,0,0,1);}
+                            }
+                        }
+                    }
+                    .contact-form-row-submit{
+                        button{width: 135px; height: 35px; text-align: center; border: none; border-radius: 6px; background-color: #864ad0; transition: all 0.3s;
+                            span{line-height: 35px; font-size: 18px; font-family: "Roboto"; color: rgb(255, 255, 255);  font-variant: small-caps; line-height: 1.2; text-transform: uppercase;}
+                            &:hover{ background-color:#652CAB; }
+                        }
                     }
                 }
             }
-        }
-        .mobile-bottom{display: none;
-            .we-are-good{max-width: 350px; margin: 0 auto; text-align: center; font-size: 21px; font-family: "PFAgoraSansPro";  color: rgb(255, 255, 255); font-style: italic; font-variant: small-caps;line-height: 1.2;   text-align: center;     padding-top: 30px; }
-            .more-q-t{ font-size: 33px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps; line-height: 1.2; text-align: center;     padding-top: 23px;}
-            .more-q-s{font-size: 24px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps; line-height: 1.2; text-align: center;     padding-top: 5px;}
-            .ibatt{ width: 300px; margin: 0 auto;    padding-top: 24px;
-                a{display: flex; align-items: center; justify-content: center; text-decoration: none; margin-left: 39px; position: relative; width: 230px; height: 60px; background-color: #864ad0; border-radius: 20px; transition: all 0.3s;
-                    &:hover{ background-color:#652CAB; }
-                    span{color: white; font-size: 18px; font-family: "PFAgoraSansPro", sans-serif;  font-weight: bold; font-variant: small-caps; letter-spacing: 1.5px;}
-                    &:before{content: ''; position: absolute; background-image: url('../images/man-ask.png'); background-size: cover; width: 37px; height: 37px; left: -58px; bottom: 11px;} 
+            .mobile-bottom{display: none;
+                .we-are-good{max-width: 350px; margin: 0 auto; text-align: center; font-size: 21px; font-family: "PFAgoraSansPro";  color: rgb(255, 255, 255); font-style: italic; font-variant: small-caps;line-height: 1.2;   text-align: center;     padding-top: 30px; }
+                .more-q-t{ font-size: 33px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps; line-height: 1.2; text-align: center;     padding-top: 23px;}
+                .more-q-s{font-size: 24px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-variant: small-caps; line-height: 1.2; text-align: center;     padding-top: 5px;}
+                .ibatt{ width: 300px; margin: 0 auto;    padding-top: 24px;
+                    a{display: flex; align-items: center; justify-content: center; text-decoration: none; margin-left: 39px; position: relative; width: 230px; height: 60px; background-color: #864ad0; border-radius: 20px; transition: all 0.3s;
+                        &:hover{ background-color:#652CAB; }
+                        span{color: white; font-size: 18px; font-family: "PFAgoraSansPro", sans-serif;  font-weight: bold; font-variant: small-caps; letter-spacing: 1.5px;}
+                        &:before{content: ''; position: absolute; background-image: url('../images/man-ask.png'); background-size: cover; width: 37px; height: 37px; left: -58px; bottom: 11px;} 
+                    }
                 }
             }
         }
     }
-}
+/* contacts */
+
+/* services */
+
+    .services{background-image: url(../images/ser-bg.jpg); background-size: cover;
+        .mbox{max-width: 1300px; padding: 0 15px;
+            .title-text{
+                h2{font-size: 47px; font-family: "ProximaNova", sans-serif; color: white; text-transform: uppercase; line-height: 1.2; margin: 0; font-weight: 900; 
+                    span{color: rgb(134, 74, 208);}
+                }
+            }
+        }
+    }
+
+/* services */

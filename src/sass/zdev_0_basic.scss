@@ -104,10 +104,10 @@ input, textarea{
     }
 }
 
-@include font-face('Proxima Nova', 'Proxima-Nova-Regular');
-@include font-face('Proxima Nova', 'Proxima-Nova-Bold', 700);
-@include font-face('Proxima Nova', 'Proxima-Nova-Black', 800);
-@include font-face('Proxima Nova', 'Proxima Nova Light', 300);
+@include font-face('ProximaNova', 'Proxima-Nova-Regular');
+@include font-face('ProximaNova', 'Proxima-Nova-Bold', 700);
+@include font-face('ProximaNova', 'Proxima-Nova-Black', 800);
+@include font-face('ProximaNova', 'Proxima Nova Light', 300);
 
 @include font-face('PFAgoraSansPro', 'AgoraSansProXThin', 100);
 @include font-face('PFAgoraSansPro', 'PFAgoraSansPro-XThinItalic', 100, italic);
