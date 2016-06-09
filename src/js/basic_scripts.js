@@ -48,13 +48,14 @@ function animationBlock(item){
     function checkForAnimate(){
         var bottomCheck = $(window).height()+$(window).scrollTop();
         var windowTop = $(window).scrollTop()+($(window).height()/1.5);
+
+        
         item.each(function(){
-           if(windowTop>$(this).offset().top || bottomCheck > $('body').height()*0.98){
+           if(windowTop>$(this).offset().top || bottomCheck > $('body').height()*0.95){
 
               var itemSect = $(this);
               var point = 0;
               itemSect.find('.animate-it').addClass('animated');
-
               var timer = setInterval(function(){
                  itemSect.find('.animate-delay').eq(point).addClass('animated');
                  point++;
@@ -247,7 +248,7 @@ $(document).ready(function() {
 
 
     //oneHeightItems();
-    //animationBlock($('.setion-animate'));
+   // animationBlock($('.setion-animate'));
 });
 
 $(window).resize(function() {
