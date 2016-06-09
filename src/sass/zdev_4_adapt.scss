@@ -41,10 +41,9 @@ $pup:#864ad0;
 }
 @media screen and (max-width: 1024px){
     /*header*/
-    .header{position: relative;display: block;width: 100%;z-index: 9;color: #fff;left: 0;top: 0;padding-top: 45px;
-        .mbox{max-width: 1550px;}
-        .header-wrap{display: flex;align-items:center;justify-content:space-between;}
-        .header-nav{margin-bottom: -17px;
+    .header{position: relative;display: block;
+        .header-wrap{flex-direction:column;}
+        .header-nav{margin-bottom: 0px;
             ol{list-style-type: none;margin:0;padding:0;display: flex;}
             li{margin:0 28px;
                 &.active{
@@ -55,6 +54,7 @@ $pup:#864ad0;
                 &:after{position: absolute;content: attr(data-count);color: rgba(255,255,255,.3);font-family: "Roboto";font-weight: 300;font-size: 14px;left: 0;top: -26px;}
             }
         }
+        .header-logo{order:1;}
         .header-getcall{display: none;}
     }
 
