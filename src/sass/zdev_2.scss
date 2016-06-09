@@ -115,7 +115,8 @@
         transform: matrix3d(0.9, 0, 0, 0, 0, -0.50, 0.433013, -0.000433013, 0, -0.866025, -0.5, 0.0005, 0, -300.615, -900, 1.9); transform-origin: 50% 20% 100px; transition: all 0.7s ease; opacity: 0;
 
             &.animated{transform: none;}
-        
+
+            
 
             .title-text{ padding-top: 132px;
                 h2{font-size: 47px; font-family: "ProximaNova", sans-serif; color: white; text-transform: uppercase; line-height: 1.2; margin: 0; font-weight: 900;  text-align: center;
@@ -124,9 +125,9 @@
             }
             .top-block{
                 .lister{display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; }
-                .item{ display: block; text-decoration: none;
+                .item{ display: block; text-decoration: none; margin-top: 30px;
                     .cont{margin: 0 auto; max-width: 70px; height: 45px;
-                        svg{width: 100%; height: 100%; transition: all 0.3s;}
+                        svg{width: 100%; height: 100%; transition: all 0.3s; fill: white;}
                     }
                     .after{padding-top: 13px;
                         b{display: block; text-decoration: none; height: 30px; line-height: 27px; border: 2px solid #67368f;padding: 0 10px; border-radius: 13px; font-size: 19px; font-family: "ProximaNova"; color: rgb(255, 255, 255);  font-weight: 700; font-variant: small-caps; background-color: transparent; transition: all 0.3s;                            
@@ -139,10 +140,13 @@
                     }
                 }
             }
+
             .bot-block{display: flex; align-items: stretch; justify-content: space-between; padding-top: 80px;
                 .left-side{width: 50%;
-                    .hed{text-align: right; font-size: 46px; font-family: "ProximaNova", sans-serif; color: rgb(254, 254, 254); text-transform: uppercase;line-height: 1.2; font-weight: 900;
-                        span{color: #864ad0; }
+                    .hed{
+                        h5{text-align: right; font-size: 46px; font-family: "ProximaNova", sans-serif; color: rgb(254, 254, 254); text-transform: uppercase;line-height: 1.2; font-weight: 900; margin: 0;
+                            span{color: #864ad0; }
+                        }
                     }
                     .but-row{text-align: right;display: flex; align-items: center; justify-content: flex-end; padding: 33px 0;
                         .going-to{ position: relative; margin-left: 20px;
@@ -169,6 +173,8 @@
                     }
                 }
             }
+
+            .mobile{display: none !important;}
         }
     }
 

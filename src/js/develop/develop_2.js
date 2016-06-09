@@ -77,6 +77,13 @@ $(document).ready(function(){
         map.set('center', pos2);
         map.set('zoom', 16);
     });
+
+    $('.services .top-block .mobile').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1
+    })
       
 });
 

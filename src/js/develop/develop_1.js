@@ -39,6 +39,23 @@
 
 /* /adapt scale */
 
+/* our-team */
+
+    function ourTeam(){
+
+        $('.slider-fotos-wrap').slick({
+            arrows:false,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+
+    }
+
+/* /our-team */
+
 
 $(document).ready(function(){
 
@@ -49,6 +66,7 @@ $(document).ready(function(){
 $(window).load(function(){
 
     adaptScale();
+    ourTeam();
 
 });
 
