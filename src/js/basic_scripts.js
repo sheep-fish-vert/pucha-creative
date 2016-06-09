@@ -214,6 +214,10 @@ function fullPage(){
             afterLoad: function(anchorLink, index){
                 if(index == 1){
                     $('.footer').addClass('top');
+                    setTimeout(function(){
+                        $('section.main').addClass('show_animate');
+                    },1000);
+
                 }else{
                     $('.footer').removeClass('top');
                 }
