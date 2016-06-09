@@ -78,6 +78,7 @@ function goTo(){
             var href = $(this).attr('href');
             href = href.replace(/^#?/,"");
             var target = $('section.'+href).offset().top;
+            $('.header .sendwich, .header .header-list').removeClass('active');
             $(scrollerO).animate({scrollTop:target},500);
         }
     });
