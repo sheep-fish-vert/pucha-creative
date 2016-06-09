@@ -1,3 +1,4 @@
+$pup:#864ad0;
 @media screen and (max-width: 1920px){
 
 }
@@ -10,7 +11,65 @@
 @media screen and (max-width: 1280px){
 
 }
+@media screen and (max-width: 1170px){
+
+
+    .main{
+        .opacity_text{font-size: 33px;
+            b{font-size: 150px;}
+            span{letter-spacing: 1.3em;display:block;margin-top: -32px;}
+        }
+
+        .sub_text{font-size: 21px;padding-top: 41px;margin-bottom: 39px;
+            &:after{bottom: -10px}
+        }
+        .main_text{margin-bottom: 20px;
+            h1{font-size: 67px;font-weight: 800;
+                b{font-size: 140px;margin-top: 0;}
+            }
+        }
+        .sub_description{font-size:18px;margin-bottom: 23px;}
+        .main_button{max-width: 371px;
+            .icon-prezentation{width: 20px;height: 18px;background:transparent url('../images/icon-prezentation.png') center center no-repeat;margin-right: 7px;}
+        }
+        .scroll-down{height: 77px;width: 26px;left: 50%;}
+    }
+
+    // header
+    .header .header-getcall .telefone-number a{font-size: 16px;}
+    .header .header-getcall .telefone-number-button a{transform: none;left: auto;right: 0;}
+}
 @media screen and (max-width: 1024px){
+    /*header*/
+    .header{position: relative;display: block;
+        .mbox{position: static;}
+        .header-wrap{flex-direction:column;}
+
+        .header-nav{margin-bottom: 0px;
+            .header-list{position: absolute;top: 0;right: 100%;width: 100%;transition:right ease-out .2s;
+                &.active{right: 0;}
+            }
+            ol{display: flex;min-height: 100vh;background-color: rgba(134, 74, 208, 0.95);flex-direction: column;align-items: center;justify-content: space-around;}
+            li.active a{color: inherit;}
+            a{font-size: 28px;
+                &:after{display: none;}
+            }
+        }
+        .header-logo{order:1;}
+        .header-getcall{display: none;}
+        .sendwich-wrap{position: relative;z-index: 2;
+            .sendwich{width: 50px;height: 26px;
+                &:after,&:before,span{width: 100%;height: 4px;background-color: #fff;position: absolute;content: '';position: absolute;top: 0;left: 0;}
+                span{top: 11px;}
+                &:before{top: auto;bottom: 0;}
+            }
+        }
+    }
+
+    .main{
+        .scroll-down{display: none;}
+    }
+
 
 }
 @media screen and (max-width: 992px){

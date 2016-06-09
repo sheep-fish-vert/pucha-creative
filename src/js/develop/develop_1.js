@@ -5,16 +5,22 @@
 
         function scaling(){
 
+            var headerHeight = $('.header').outerHeight();
+
+            var windowHeight = $(window).height() - headerHeight;
+
             $('.conteiner').each(function(){
 
-                var itemHeight = $(this).outerHeight();
-                var windowHeight = $(window).height();
+                $(this).css({'transform':'scale(1) translateZ(0px)', 'margin-top':'0px'});
 
-                $(this).css({'transform':'scale(1)'});
+                var itemHeight = $(this).outerHeight();
+
                 if(itemHeight > windowHeight){
-                    var scalePerc = ((windowHeight * 100) / itemHeight).toFixed();
-                    console.log(scalePerc);
-                    $(this).css({'transform':'scale(0.'+scalePerc+')'});
+                    var scalePerc = windowHeight / itemHeight;
+                    var scaleHeight = itemHeight * scalePerc;
+                    var topTransform = (itemHeight - scaleHeight)/2;
+                    $(this).css({'transform':'scale('+scalePerc+') translateZ(0px)', 'margin-top':'-'+topTransform+'px'});
+                    console.log(itemHeight +' - '+scaleHeight+' - '+headerHeight);
                 }
 
             });
@@ -22,9 +28,11 @@
 
         scaling();
 
-        $(window).resize(function(){
+        var timer = null;
 
-            scaling();
+        $(window).resize(function(){
+            clearTimeout(timer);
+            timer = setTimeout(function(){scaling();}, 1000);
 
         });
 

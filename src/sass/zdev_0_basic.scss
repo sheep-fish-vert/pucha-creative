@@ -48,6 +48,12 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 
 /* adapted styles for wp-admin panel */
 
+@media screen and (max-width: 1024px){
+    body .fullpage .section{min-height: 100vh;}
+}
+
+
+
 @media screen and (max-width: 782px){
 
     body{
@@ -64,6 +70,10 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /base styles */
 
 /* wraps styling*/
+
+.global-wrapper{
+    .fp-tableCell{display: flex;align-items: flex-start;justify-content: center;}
+}
 
 .mbox{max-width:1800px;width:100%;margin:0 auto;padding:0 10px;position:relative;z-index:1;}
 .mbox:after{content:"";clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;display:block;}
