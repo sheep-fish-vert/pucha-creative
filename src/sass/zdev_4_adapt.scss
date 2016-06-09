@@ -41,7 +41,7 @@ $pup:#864ad0;
 }
 @media screen and (max-width: 1024px){
     /*header*/
-    .header{position: relative;display: block;
+    .header{position: relative;display: block;padding-top: 23px;
         .mbox{position: static;}
         .header-wrap{flex-direction:column;}
 
@@ -77,8 +77,19 @@ $pup:#864ad0;
     .main{
         .scroll-down{display: none;}
         .main-wrap{padding-top: 135px;}
-    }
 
+        .opacity_text{font-size: 32px;
+            b{font-size: 140px;}
+            span{letter-spacing: 1.2em;}
+        }
+
+        .sub_text{font-size: 20px;padding-top: 27px;margin-bottom: 33px;}
+        .main_text{margin-bottom: 20px;
+            h1{font-size: 65px;font-weight: 800;
+                b{margin-top: 0;}
+            }
+        }
+    }
     .footer{display: none;}
 
 }
