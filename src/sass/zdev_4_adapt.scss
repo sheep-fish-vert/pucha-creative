@@ -28,7 +28,7 @@ $pup:#864ad0;
                 b{font-size: 140px;margin-top: 0;}
             }
         }
-        .sub_description{font-size:18px;margin-bottom: 23px;}
+        .sub_description{/*font-size:18px;*/margin-bottom: 23px;}
         .main_button{max-width: 371px;
             .icon-prezentation{width: 20px;height: 18px;background:transparent url('../images/icon-prezentation.png') center center no-repeat;margin-right: 7px;}
         }
@@ -89,7 +89,12 @@ $pup:#864ad0;
                 b{margin-top: 0;}
             }
         }
-        .sub_description{font-size: 14px;}
+        .main_button{max-width: 100%;justify-content: space-around;
+            .button-purple{height: 57px;width: 220px;
+                span{font-size: 21px;}
+            }
+        }
+        /*.sub_description{font-size: 14px;}*/
     }
     .footer{display: none;}
 
