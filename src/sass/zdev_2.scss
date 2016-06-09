@@ -107,10 +107,18 @@
 
 /* services */
 
-    .services{background-image: url(../images/ser-bg.jpg); background-size: cover;
-        .mbox{max-width: 1300px; padding: 0 15px;
+    .services{background-image: url(../images/ser-bg.jpg); overflow: hidden; background-size: cover;
+    &.active{
+        .mbox{transform: none; visibility: visible; opacity: 1; }
+    }
+        .mbox{max-width: 1300px; padding: 0 15px; visibility: hidden;       
+        transform: matrix3d(0.9, 0, 0, 0, 0, -0.50, 0.433013, -0.000433013, 0, -0.866025, -0.5, 0.0005, 0, -300.615, -900, 1.9); transform-origin: 50% 20% 100px; transition: all 0.7s ease; opacity: 0;
+
+            &.animated{transform: none;}
+        
+
             .title-text{ padding-top: 132px;
-                h2{font-size: 47px; font-family: "ProximaNova", sans-serif; color: white; text-transform: uppercase; line-height: 1.2; margin: 0; font-weight: 900; 
+                h2{font-size: 47px; font-family: "ProximaNova", sans-serif; color: white; text-transform: uppercase; line-height: 1.2; margin: 0; font-weight: 900;  text-align: center;
                     span{color: rgb(134, 74, 208);}
                 }
             }
