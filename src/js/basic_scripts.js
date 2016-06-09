@@ -4,7 +4,7 @@ jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
 jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 
-// var scroller=jQuery.browser.webkit ? "body": "html";
+var scrollerO=jQuery.browser.webkit ? "body": "html";
 
 $.scrollbarWidth=function(){var a,b,c;if(c===undefined){a=$('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');b=a.children();c=b.innerWidth()-b.height(99).innerWidth();a.remove()}return c};
 
@@ -15,7 +15,7 @@ function scrollUp(block,targetBlock) {
     $(block).click(function(e){
         var target = $(targetBlock).offset().top;
 
-        $(scroller).stop().animate({scrollTop:target},800);
+        $(scrollerO).stop().animate({scrollTop:target},800);
         return false;
 
         e.preventDefault();
@@ -72,11 +72,14 @@ function animationBlock(item){
 
 /*GO TO href*/
 function goTo(){
-    $('.header-menu a').click(function(e){
-        e.preventDefault();
-        var href = $(this).attr('href');
-        var target = $(href).offset().top-65;
-        $(scroller).animate({scrollTop:target},500);
+    $('.header-list a').click(function(e){
+        if ($(window).width() <= 1023) {
+            e.preventDefault();
+            var href = $(this).attr('href');
+            href = href.replace(/^#?/,"");
+            var target = $('section.'+href).offset().top;
+            $(scrollerO).animate({scrollTop:target},500);
+        }
     });
 }
 
@@ -129,7 +132,7 @@ function headeButer(menuMobile,toggleMenu){
         menuMobile.click(function(event) {
             if($(window).width()<1024-$.scrollbarWidth()){
                 $(this).toggleClass('active');
-                toggleMenu.stop().slideToggle();
+                toggleMenu.toggleClass('active');
             }
         });
 
@@ -138,7 +141,7 @@ function headeButer(menuMobile,toggleMenu){
                 var div = toggleMenu;
                 if (!div.is(event.target) && div.has(event.target).length === 0 && !menuMobile.is(event.target) && menuMobile.has(event.target).length === 0)
                     {
-                        toggleMenu.slideUp();
+                        toggleMenu.removeClass('active');
                         menuMobile.removeClass('active');
                     }
             }
@@ -244,15 +247,14 @@ $(document).ready(function() {
     if ($(window).width() <= 1023) {
         $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
     }
+    goTo();
+    headeButer($('.header .sendwich'),$('.header .header-list'));
 
-
-    //oneHeightItems();
-    //animationBlock($('.setion-animate'));
+    if ($(window).width() > 1024) {
+        fullPage();
+    }
 });
 
 $(window).resize(function() {
 
-});
-$(document).ready(function() {
-     fullPage();
 });

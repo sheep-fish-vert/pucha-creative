@@ -45,7 +45,7 @@ $pup:#864ad0;
         .mbox{position: static;}
         .header-wrap{flex-direction:column;}
 
-        .header-nav{margin-bottom: 0px;
+        .header-nav{margin-bottom: 0px;align-self: flex-start;margin-left: 12px;padding-bottom: 15px;
             .header-list{position: absolute;top: 0;right: 100%;width: 100%;transition:right ease-out .2s;
                 &.active{right: 0;}
             }
@@ -55,11 +55,19 @@ $pup:#864ad0;
                 &:after{display: none;}
             }
         }
-        .header-logo{order:1;}
+        .header-logo{order:1;
+            svg{transform: scale3d(.9,.9,1);}
+        }
         .header-getcall{display: none;}
         .sendwich-wrap{position: relative;z-index: 2;
-            .sendwich{width: 50px;height: 26px;
-                &:after,&:before,span{width: 100%;height: 4px;background-color: #fff;position: absolute;content: '';position: absolute;top: 0;left: 0;}
+            .sendwich{width: 50px;height: 26px;cursor: pointer;
+                &.active{
+                    span{opacity: 0;}
+                    &:before{bottom: 11px;transform: rotate(40deg);}
+                    &:after{top: 11px;transform: rotate(-40deg);}
+                }
+
+                &:after,&:before,span{width: 100%;height: 4px;background-color: #fff;position: absolute;content: '';position: absolute;top: 0;left: 0;transition:all ease-out .2s;}
                 span{top: 11px;}
                 &:before{top: auto;bottom: 0;}
             }
