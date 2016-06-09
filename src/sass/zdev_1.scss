@@ -2,7 +2,34 @@
 
     .our-team{background-image:url(../images/out-team-bg.jpg);background-size: cover;
 
+        .conteiner{width: 100%;padding-top: 140px;}
 
+        .our-team-wrap{display: flex;justify-content: space-between;
+
+            .title-small{color:#fff;font-size: 19px;font-weight: 300;margin-bottom: 10px;}
+            .title{font-size: 60px;font-weight: 900;text-transform: uppercase;color:#fff;margin: 0 0 45px 0;
+                span{color:#864ad0;}
+            }
+            .descript{font-size: 19px;color:#4c4947;font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style:italic;max-width: 280px;text-shadow:0 0 0 rgba(255,255,255, .25);}
+
+            .slider-block{
+                .slider-fotos{position: absolute;top:0;left:420px;width: 526px;}
+
+                .slider-background{position: absolute;width: 526px;height: 526px;bottom:0;left:0;
+                    .slider-background-border{position: absolute;width: 100%;height: 100%;background-image: url(../images/slider-background-border-img.png);}
+                    .slider-background-fon{background-image:url(../images/slider-background-fon-img.png);position: absolute;width: 495px;height: 496px;bottom:15px;left:16px;}
+                }
+
+                .slider-fotos-wrap{margin-bottom: 16px;
+                    .slider-foto-item{
+                        img{margin: 0 auto;}
+                    }
+                }
+
+            }
+            .right-column{display: none;}
+
+        }
 
     }
 
