@@ -156,69 +156,85 @@ function headeButer(menuMobile,toggleMenu){
 
 /* /expresion for numbers with spaces */
 
+
+
+var fullPageCreated = false;
+
 function fullPage(){
+    if(fullPageCreated === false) {
+        fullPageCreated = true;
+        var header = $('.header').outerHeight();
 
-    var header = $('.header').outerHeight();
+        $('.fullpage').fullpage({
+            //Navigation
+            menu: '.header-list ol',
+            //lockAnchors: false,
+            anchors:['main', 'services','portfolio','our_team','contacts'],
 
-    $('.fullpage').fullpage({
-        //Navigation
-        menu: '.header-list ol',
-        //lockAnchors: false,
-        anchors:['main', 'services','portfolio','our_team','contacts'],
+            //Scrolling
+            //css3: true,
+            scrollingSpeed: 700,
+            //autoScrolling: true,
+            //fitToSection: true,
+            //fitToSectionDelay: 1000,
+            scrollBar: false,
+            loopHorizontal: true,
+            continuousVertical: false,
 
-        //Scrolling
-        //css3: true,
-        scrollingSpeed: 700,
-        //autoScrolling: true,
-        //fitToSection: true,
-        //fitToSectionDelay: 1000,
-        scrollBar: false,
-        loopHorizontal: true,
-        continuousVertical: false,
+            //scrollOverflowOptions: null,
+            //touchSensitivity: 15,
+            //normalScrollElementTouchThreshold: 5,
 
-        //scrollOverflowOptions: null,
-        //touchSensitivity: 15,
-        //normalScrollElementTouchThreshold: 5,
+            //Accessibility
+            //keyboardScrolling: true,
+            //animateAnchor: true,
+            //recordHistory: true,
+            scrollOverflow: true,
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            loopTop: false,
 
-        //Accessibility
-        //keyboardScrolling: true,
-        //animateAnchor: true,
-        //recordHistory: true,
-        scrollOverflow: false,
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-        loopTop: false,
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            paddingTop: header+"px",
+            //paddingBottom: '10px',
+            fixedElements: '.header, .footer',
 
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-        paddingTop: header+"px",
-        //paddingBottom: '10px',
-        fixedElements: '.header, .footer',
+            //Custom selectors
+            sectionSelector: '.section',
 
-        //Custom selectors
-        sectionSelector: '.section',
+            //events
+            onLeave: function(index, nextIndex, direction){},
+            afterLoad: function(anchorLink, index){
+                if(index == 1){
+                    $('.footer').addClass('top');
+                }else{
+                    $('.footer').removeClass('top');
+                }
+            },
+            afterRender: function(){},
+            afterResize: function(){},
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+            onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        });
 
-        //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){
-            if(index == 1){
-                $('.footer').addClass('top');
-            }else{
-                $('.footer').removeClass('top');
-            }
-        },
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-    });
-
-    $('.scroll-down').click(function(event) {
-        $.fn.fullpage.moveSectionDown();
-    });
+        $('.scroll-down').click(function(event) {
+            $.fn.fullpage.moveSectionDown();
+        });
+    }
 }
+$(window).resize(function() {
 
+    if ($(window).width() <= 1023) {
+        fullPageCreated = false;
+        $.fn.fullpage.destroy('all');
+    }
+    if ($(window).width() > 1024) {
+        fullPage();
+    }
+
+});
 
 
 /* DOCUMENT READY  */
