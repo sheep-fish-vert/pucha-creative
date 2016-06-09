@@ -20,24 +20,28 @@ $pup:#864ad0;
             span{letter-spacing: 1.3em;display:block;margin-top: -32px;}
         }
 
-        .sub_text{font-size: 21px;padding-top: 60px;margin-bottom: 58px;
-            &:after{bottom: -24px;width: 160px;}
+        .sub_text{font-size: 21px;padding-top: 41px;margin-bottom: 39px;
+            &:after{bottom: -10px}
         }
-        .main_text{
-            h1{font-size: 88px;font-weight: 800;
-                b{font-size: 165px;}
+        .main_text{margin-bottom: 20px;
+            h1{font-size: 67px;font-weight: 800;
+                b{font-size: 140px;margin-top: 0;}
             }
         }
-        .sub_description{max-width: 715px;font-size: 20px;line-height: 1.15;margin-bottom: 23px;}
+        .sub_description{font-size:18px;margin-bottom: 23px;}
         .main_button{max-width: 371px;
             .icon-prezentation{width: 20px;height: 18px;background:transparent url('../images/icon-prezentation.png') center center no-repeat;margin-right: 7px;}
         }
         .scroll-down{height: 77px;width: 26px;bottom: 20px;left: 50%;}
     }
+
+    // header
+    .header .header-getcall .telefone-number a{font-size: 16px;}
+    .header .header-getcall .telefone-number-button a{transform: none;left: auto;right: 0;}
 }
 @media screen and (max-width: 1024px){
     /*header*/
-    .header{position: fixed;display: block;width: 100%;z-index: 9;color: #fff;left: 0;top: 0;padding-top: 45px;
+    .header{position: absolute;display: block;width: 100%;z-index: 9;color: #fff;left: 0;top: 0;padding-top: 45px;
         .mbox{max-width: 1550px;}
         .header-wrap{display: flex;align-items:center;justify-content:space-between;}
         .header-nav{margin-bottom: -17px;
@@ -53,6 +57,8 @@ $pup:#864ad0;
         }
         .header-getcall{display: none;}
     }
+
+
 
 
 }

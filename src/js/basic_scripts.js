@@ -199,7 +199,7 @@ function fullPage(){
             verticalCentered: true,
             paddingTop: header+"px",
             //paddingBottom: '10px',
-            fixedElements: '.header, .footer',
+            //fixedElements: '.header, .footer',
 
             //Custom selectors
             sectionSelector: '.section',
