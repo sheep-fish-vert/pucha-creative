@@ -48,6 +48,12 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 
 /* adapted styles for wp-admin panel */
 
+@media screen and (max-width: 1024px){
+    body .fullpage .section{min-height: 100vh;}
+}
+
+
+
 @media screen and (max-width: 782px){
 
     body{
