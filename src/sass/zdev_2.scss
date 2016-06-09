@@ -109,9 +109,56 @@
 
     .services{background-image: url(../images/ser-bg.jpg); background-size: cover;
         .mbox{max-width: 1300px; padding: 0 15px;
-            .title-text{
+            .title-text{ padding-top: 132px;
                 h2{font-size: 47px; font-family: "ProximaNova", sans-serif; color: white; text-transform: uppercase; line-height: 1.2; margin: 0; font-weight: 900; 
                     span{color: rgb(134, 74, 208);}
+                }
+            }
+            .top-block{
+                .lister{display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; }
+                .item{ display: block; text-decoration: none;
+                    .cont{margin: 0 auto; max-width: 70px; height: 45px;
+                        svg{width: 100%; height: 100%; transition: all 0.3s;}
+                    }
+                    .after{padding-top: 13px;
+                        b{display: block; text-decoration: none; height: 30px; line-height: 27px; border: 2px solid #67368f;padding: 0 10px; border-radius: 13px; font-size: 19px; font-family: "ProximaNova"; color: rgb(255, 255, 255);  font-weight: 700; font-variant: small-caps; background-color: transparent; transition: all 0.3s;                            
+                        }
+
+                    }
+                    &:hover{
+                        .cont svg{fill: #67368f; }
+                        .after b{ background-color: #67368f; }
+                    }
+                }
+            }
+            .bot-block{display: flex; align-items: stretch; justify-content: space-between; padding-top: 80px;
+                .left-side{width: 50%;
+                    .hed{text-align: right; font-size: 46px; font-family: "ProximaNova", sans-serif; color: rgb(254, 254, 254); text-transform: uppercase;line-height: 1.2; font-weight: 900;
+                        span{color: #864ad0; }
+                    }
+                    .but-row{text-align: right;display: flex; align-items: center; justify-content: flex-end; padding: 33px 0;
+                        .going-to{ position: relative; margin-left: 20px;
+                            span{ font-size: 16px; font-family: "Roboto", sans-serif; margin-top: -3px;  color: rgb(255, 255, 255); text-decoration: underline; font-variant: small-caps;line-height: 1.2; padding-right: 35px;}
+                            img{position: absolute; right: 0; top: calc(100% - 20px); }
+                        }
+                    }
+                    .citat{ font-size: 17px; font-family: "PFAgoraSansPro", sans-serif;  color: rgb(159, 159, 159); font-style: italic; font-variant: small-caps; font-weight: 500; line-height: 1.2; text-align: right;}
+                    .call{ text-align: right; padding-top: 25px;
+                        .call-me{width: 137px; display: inline-block; height: 31px; border-radius: 13px; background-color: #864ad0; text-align: center; text-decoration: none; transition: all 0.3s; margin-left: 40px;
+                            span{line-height:  31px;  font-size: 16px; font-family: "ProximaNova"; color: rgb(255, 255, 255); font-weight: bold;  font-variant: small-caps;}
+                            &:hover{background-color: #6637a1; } 
+                        }
+                    }
+                }
+                .right-side{width: 50%;
+                    .rat{width: 100%; text-align: center; font-size: 283px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-weight: bold; font-variant: small-caps;text-shadow: -5px 0px 0px #6637a1;}
+                    .under{display: flex; align-items: center; justify-content: space-around;
+                        .part{ padding-left: 35px; position: relative; text-align: left; max-width: 210px;
+                            img{position: absolute; top: 0; left: 0; }
+                            .title{font-size: 18px; font-family: "Roboto", sans-serif; font-weight: 500; color: rgb(255, 255, 255); font-variant: small-caps; line-height: 1.2; padding-bottom: 10px;}
+                            .after{font-size: 10px; font-family: "PFAgoraSansPro", sans-serif; color: rgb(159, 159, 159); font-style: italic; font-variant: small-caps; line-height: 1.2;   text-align: left; font-weight: 500;}
+                        }
+                    }
                 }
             }
         }
