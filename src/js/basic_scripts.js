@@ -229,9 +229,11 @@ $(window).resize(function() {
     if ($(window).width() <= 1023) {
         fullPageCreated = false;
         $.fn.fullpage.destroy('all');
+        $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
     }
     if ($(window).width() > 1024) {
         fullPage();
+        $('.header').removeAttr('style');
     }
 
 });
@@ -239,6 +241,11 @@ $(window).resize(function() {
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
+    if ($(window).width() <= 1023) {
+        $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
+    }
+
+
     //oneHeightItems();
     //animationBlock($('.setion-animate'));
 });
