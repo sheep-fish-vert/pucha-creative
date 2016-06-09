@@ -2,28 +2,45 @@
 $pup:#864ad0;
 .main{background-size: cover;background-position: center center;background-repeat: no-repeat;text-align: center;
     p{margin:0;}
+    &.show_animate{
+        .opacity_text{
+            b,span{animation-name: fadeText;}
+        }
+        .sub_text{opacity: 1;transform: translateY(0);}
+        .main_text{
+            h1{opacity: 1;transform: translateY(0);}
+        }
+        .sub_description{opacity: 1;transform: translateY(0);}
+        .main_button{opacity: 1;transform: translateY(0);}
+        .scroll-down{opacity: 1;transform: translateY(0);}
+    }
     .main-wrap{padding-bottom: 70px;}
     .fp-tableCell{align-items: flex-start;}
     .opacity_text{font-family: 'Roboto';font-size: 48px;color: rgba(255,255,255, .05);font-weight: 700;
-        b{font-weight: 900;font-size: 204px;display: block;letter-spacing: 0.1em;}
-        span{letter-spacing: 1.3em;display:block;margin-top: -45px;}
+        b{font-weight: 900;font-size: 204px;display: block;letter-spacing: 0.1em;opacity: 0;animation-duration: 2s;animation-fill-mode: forwards;}
+        span{letter-spacing: 1.3em;display:block;margin-top: -45px;opacity: 0;animation-duration: 2s;animation-delay: 1.5s;animation-fill-mode: forwards;}
+        &.active{}
     }
-    .sub_text{font-size: 21px;color: white;text-transform: uppercase;padding-top: 60px;position: relative;margin-bottom: 58px;
+    .sub_text{font-size: 21px;color: white;text-transform: uppercase;padding-top: 60px;position: relative;margin-bottom: 58px;transition:all ease-out .7s 1s;opacity: 0;transform: translateY(10%);
         &:after{content: '';position: absolute;bottom: -24px;background-color: #fff;transform: translateX(-50%);height: 3px;width: 160px;}
     }
     .main_text{color: white;
-        h1{margin: 0;font-size: 88px;font-family: 'ProximaNova';font-weight: 800;
-            span{color: $pup}
+        h1{margin: 0;font-size: 88px;font-family: 'ProximaNova';font-weight: 800;transition:all ease-out .7s 1.2s;opacity: 0;transform: translateY(10%);
+            span{color: $pup;}
             b{font-size: 165px;display: block;margin-top: 9px;font-weight: 900;}
         }
     }
-    .sub_description{max-width: 715px;margin:0 auto;color: white;font-size: 20px;line-height: 1.15;margin-bottom: 23px;}
-    .main_button{max-width: 371px;width: 100%;margin:0 auto;display: flex;align-items:center;justify-content:space-between;
+    .sub_description{max-width: 715px;margin:0 auto;color: white;font-size: 20px;line-height: 1.15;margin-bottom: 23px;transition:all ease-out .7s 1.4s;opacity: 0;transform: translateY(10%);}
+    .main_button{max-width: 371px;width: 100%;margin:0 auto;display: flex;align-items:center;justify-content:space-between;transition:all ease-out .7s 1.6s;opacity: 0;transform: translateY(10%);
         .icon-video{border-left: 17px solid white;border-top: 10px solid transparent;border-bottom: 10px solid transparent;margin-right: 10px;}
         .icon-prezentation{width: 20px;height: 18px;background:transparent url('../images/icon-prezentation.png') center center no-repeat;margin-right: 7px;}
     }
-    .scroll-down{height: 77px;width: 26px;position: absolute;top: calc(100% - 30px);left: 50%;transform: translate(-50%, 0);cursor: pointer;transition:all ease-out .2s;
+    .scroll-down{height: 77px;width: 26px;position: absolute;top: calc(100% - 30px);left: 50%;transform: translate(-50%, 0);cursor: pointer;transition:all ease-out .7s 1.8s;opacity: 0;transform: translateY(10%);
         &:hover{transform: translate(-50%, 0) scale(1.05);}
+    }
+    @keyframes fadeText {
+        0% {transform:scale(1.5);opacity: 0;text-shadow: 0px 0px 31px rgba(255, 255, 255, 0.06);}
+        100% {transform:scale(1);opacity: 1;text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);}
     }
 }
 
