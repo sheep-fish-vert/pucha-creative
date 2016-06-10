@@ -66,6 +66,7 @@
 
                 .name-slider-wrap{
                     .name-slider{margin-bottom: 0;color:#fff;font-size: 11px;
+                        .slick-list{height: 300px!important;}
                         .name-slider-item{max-width: 300px;padding: 10px 0;opacity: .3;font-family: "Roboto", sans-serif;transition:all 300ms ease;
                             &.slick-current{font-size: 16px;opacity: 1;
                                 .name-slider-person{text-decoration: underline;}
