@@ -13,7 +13,7 @@ $pup:#864ad0;
 }
 @media screen and (max-width: 1170px){
 
-
+    // main
     .main{
         .opacity_text{font-size: 33px;
             b{font-size: 150px;}
@@ -28,7 +28,7 @@ $pup:#864ad0;
                 b{font-size: 140px;margin-top: 0;}
             }
         }
-        .sub_description{font-size:18px;margin-bottom: 23px;}
+        .sub_description{/*font-size:18px;*/margin-bottom: 23px;}
         .main_button{max-width: 371px;
             .icon-prezentation{width: 20px;height: 18px;background:transparent url('../images/icon-prezentation.png') center center no-repeat;margin-right: 7px;}
         }
@@ -56,7 +56,7 @@ $pup:#864ad0;
             }
         }
         .header-logo{order:1;padding-top: 25px;
-            svg{transform: scale3d(.9,.9,1);}
+            /*svg{transform: scale3d(.9,.9,1);}*/
         }
         .header-getcall{display: none;}
         .sendwich-wrap{position: fixed;z-index: 2;
@@ -74,12 +74,13 @@ $pup:#864ad0;
         }
     }
 
+    // main
     .main{
         .scroll-down{display: none;}
         .main-wrap{padding-top: 135px;}
 
         .opacity_text{font-size: 32px;
-            b{font-size: 140px;}
+            b{font-size: 135px;}
             span{letter-spacing: 1.2em;}
         }
 
@@ -89,8 +90,14 @@ $pup:#864ad0;
                 b{margin-top: 0;}
             }
         }
-        .sub_description{font-size: 14px;}
+        .main_button{max-width: 100%;justify-content: space-around;
+            .button-purple{height: 57px;width: 220px;
+                span{font-size: 21px;}
+            }
+        }
+        /*.sub_description{font-size: 14px;}*/
     }
+    // footer
     .footer{display: none;}
 
 }
@@ -109,6 +116,7 @@ $pup:#864ad0;
     }
 }
 @media screen and (max-width: 479px){
+    // main
     .main{
         .main-wrap{padding-top: 135px;}
         .opacity_text{font-size: 25px;
@@ -128,6 +136,7 @@ $pup:#864ad0;
     }
 }
 @media screen and (max-width: 380px){
+    // main
     .main{
         .main-wrap{padding-top: 135px;}
         .opacity_text{font-size: 15px;
