@@ -74,7 +74,7 @@ function animationBlock(item){
 /*GO TO href*/
 function goTo(){
     $('.header-list a').click(function(e){
-        if ($(window).width() <= 1023) {
+        if ($(window).width() <= 1024) {
             e.preventDefault();
             var href = $(this).attr('href');
             href = href.replace(/^#?/,"");
@@ -132,14 +132,14 @@ function bindExample(){
 function headeButer(menuMobile,toggleMenu){
     if(menuMobile){
         menuMobile.click(function(event) {
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<=1024-$.scrollbarWidth()){
                 $(this).toggleClass('active');
                 toggleMenu.toggleClass('active');
             }
         });
 
         $(document).on('click touchstart',function (event){
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<=1024-$.scrollbarWidth()){
                 var div = toggleMenu;
                 if (!div.is(event.target) && div.has(event.target).length === 0 && !menuMobile.is(event.target) && menuMobile.has(event.target).length === 0)
                     {
@@ -218,7 +218,7 @@ function fullPage(){
 }
 $(window).resize(function() {
 
-    if ($(window).width() <= 1023) {
+    if ($(window).width() <= 1024) {
         fullPageCreated = false;
         $.fn.fullpage.destroy('all');
         $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
@@ -253,7 +253,7 @@ function changeViewport(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    if ($(window).width() <= 1023) {
+    if ($(window).width() <= 1024) {
         $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
          setTimeout(function(){
             $('section.main').addClass('show_animate');
