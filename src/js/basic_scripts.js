@@ -74,7 +74,7 @@ function animationBlock(item){
 /*GO TO href*/
 function goTo(){
     $('.header-list a').click(function(e){
-        if ($(window).width() <= 1023) {
+        if ($(window).width() <= 1024) {
             e.preventDefault();
             var href = $(this).attr('href');
             href = href.replace(/^#?/,"");
@@ -132,14 +132,14 @@ function bindExample(){
 function headeButer(menuMobile,toggleMenu){
     if(menuMobile){
         menuMobile.click(function(event) {
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<=1024-$.scrollbarWidth()){
                 $(this).toggleClass('active');
                 toggleMenu.toggleClass('active');
             }
         });
 
         $(document).on('click touchstart',function (event){
-            if($(window).width()<1024-$.scrollbarWidth()){
+            if($(window).width()<=1024-$.scrollbarWidth()){
                 var div = toggleMenu;
                 if (!div.is(event.target) && div.has(event.target).length === 0 && !menuMobile.is(event.target) && menuMobile.has(event.target).length === 0)
                     {
@@ -173,27 +173,14 @@ function fullPage(){
         $('.fullpage').fullpage({
             //Navigation
             menu: '.header-list ol',
-            //lockAnchors: false,
             anchors:['main', 'services','portfolio','our-team','contacts'],
 
             //Scrolling
-            //css3: true,
             scrollingSpeed: 700,
-            //autoScrolling: true,
-            //fitToSection: true,
-            //fitToSectionDelay: 1000,
             scrollBar: false,
             loopHorizontal: true,
             continuousVertical: false,
 
-            //scrollOverflowOptions: null,
-            //touchSensitivity: 15,
-            //normalScrollElementTouchThreshold: 5,
-
-            //Accessibility
-            //keyboardScrolling: true,
-            //animateAnchor: true,
-            //recordHistory: true,
             scrollOverflow: false,
             responsiveWidth: 0,
             responsiveHeight: 0,
@@ -203,10 +190,6 @@ function fullPage(){
             controlArrows: true,
             verticalCentered: true,
             paddingTop: header+"px",
-            //paddingBottom: '10px',
-            //fixedElements: '.header, .footer',
-
-            //Custom selectors
             sectionSelector: '.section',
 
             //events
@@ -235,7 +218,7 @@ function fullPage(){
 }
 $(window).resize(function() {
 
-    if ($(window).width() <= 1023) {
+    if ($(window).width() <= 1024) {
         fullPageCreated = false;
         $.fn.fullpage.destroy('all');
         $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
@@ -247,11 +230,34 @@ $(window).resize(function() {
 
 });
 
+function changeViewport(){
+
+    $(window).resize(function(){
+
+        whatViewport();
+
+    });
+
+    function whatViewport(){
+
+        var windowWidth = screen.width;
+        var viewport = $("meta[name=viewport]");
+        viewport.attr('content', 'width=device-width');
+        if(windowWidth<=640){
+            viewport.attr('content', 'width=640');
+        }
+
+    }
+
+}
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    if ($(window).width() <= 1023) {
+    if ($(window).width() <= 1024) {
         $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
+         setTimeout(function(){
+            $('section.main').addClass('show_animate');
+        },1000);
     }
     goTo();
     headeButer($('.header .sendwich'),$('.header .header-list'));
@@ -264,5 +270,11 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+
+});
+
+$(window).load(function(){
+
+    changeViewport();
 
 });

@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
 
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
     <link href='https://fonts.googleapis.com/css?family=Roboto:900,700,500,400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
     <!-- build:css -->
@@ -40,6 +38,13 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-
+    <script>
+        if(screen.width>640){
+            document.write('<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />')
+        }
+        else{
+            document.write('<meta name="viewport" content="width=640, user-scalable=false />')
+        }
+    </script>
 </head>
 <body>
