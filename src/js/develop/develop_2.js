@@ -85,6 +85,53 @@ $(document).ready(function(){
         slidesToShow: 1
     })
       
+      $('.tabs-row .topest>ul>li').click(function(){
+          $('.tabs-row .topest>ul>li').removeClass('active');
+          $(this).addClass('active');
+          var current = $(this).index() ;
+          $('.tabs-row .disp>ul>li').removeClass('active');
+          $('.tabs-row .disp>ul>li').eq(current).addClass('active')
+      });
+
+      $('.button-row a').click( function(event) {
+          event.preventDefault();
+
+          var current = $(this) ;
+          var whatTab = $(this).attr('data-tab');
+          var currentBlock = $(this).closest('li').children('ul');
+
+          var contentInside = 'none';
+
+          var res ;
+          var askContent = {
+                action: 'addContent',
+                whatTab: whatTab
+            };
+
+            var actionUrl = 'js/json/addcontent.json';
+            $.ajax({
+                url:actionUrl,
+                data:askContent,
+                method:'POST',
+                success : function(data){
+                    //var res = JSON.parse(data);
+                    res = data ;
+                    console.log(res);
+                    if (res.isItMoreContent == true){
+                        current.closest('.button-row').remove();
+                    }   
+
+                    contentInside = res.contentMore ;   
+                    currentBlock.append(contentInside);                   
+                }
+            });
+
+            
+            
+                
+
+      });
+
 });
 
 $(window).load(function(){
