@@ -4,7 +4,7 @@
 
         .mbox{max-width: 1306px;}
 
-        .conteiner{width: 100%;padding-top: 152px;}
+        .conteiner{width: 100%;padding-top: 112px;}
 
         .our-team-wrap{display: flex;justify-content: space-between;
 
@@ -34,7 +34,12 @@
                         }
                         .slider-socials{padding-top: 20px;display: flex;position: absolute;width: 100%;align-items: center;justify-content: center;
                             .slider-social-item{padding:0 5px;
-                                img{width: 20px;height: 20px;}
+                                a{
+                                    &:hover{
+                                        img{opacity: 1;}
+                                    }
+                                    img{width: 20px;height: 20px;opacity: 0.5;transition:opacity 300ms ease;}
+                                }
                             }
                         }
                     }
@@ -46,7 +51,7 @@
                     &:before{width: 233px;height: 1px;left:100%;top:221px;}
                     &:after{height: 97px;width: 1px;left:calc(100% + 232px);top:calc(221px - 97px);}
 
-                    .slider-item-descript-wrap{position: absolute;transition:absolute;width: 372px;min-height: 254px;padding:25px 17px 40px 29px;background-color: rgba(0, 0, 0, .84);font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style: italic;z-index:0;opacity:1;transition:opacity 300ms ease;
+                    .slider-item-descript-wrap{position: absolute;top:0;left:0;transition:absolute;width: 372px;min-height: 254px;padding:25px 17px 40px 29px;background-color: rgba(0, 0, 0, .84);font-family: 'PFAgoraSansPro', sans-serif;font-weight: 100;font-style: italic;z-index:0;opacity:0;transition:opacity 300ms ease;
                         &.active{opacity: 1;z-index: 1;position: relative;}
 
                         .slider-item-descript-name{font-size: 18px;color:#fff;text-align: center;margin-bottom: 6px;}
@@ -57,7 +62,15 @@
                 }
 
             }
-            .right-column{display: none;}
+            .right-column{width: calc(100% - 986px);
+
+                .name-slider-wrap{
+                    .name-slider{margin-bottom: 0;color:#fff;
+                        .name-slider-item{max-width: 300px;}
+                    }
+                }
+
+            }
 
         }
 

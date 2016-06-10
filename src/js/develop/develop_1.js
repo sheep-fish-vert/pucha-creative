@@ -49,7 +49,20 @@
             infinite: true,
             speed: 500,
             fade: true,
-            cssEase: 'linear'
+            cssEase: 'linear',
+            asNavFor:'.name-slider'
+        });
+
+        $('.name-slider').slick({
+            arrows:false,
+            dots:false,
+            infinite:true,
+            speed:500,
+            centerMode:true,
+            vertical:true,
+            verticalSwiping:true,
+            slidesToShow:7,
+            asNavFor:'.slider-fotos-wrap'
         });
 
     }
