@@ -42,6 +42,13 @@ $pup:#864ad0;
 @media screen and (max-width: 1024px){
     /*header*/
     .header{position: relative;display: block;padding-top: 23px;
+        &.header-inside{background-color: #fff;padding-top: 29px;padding-bottom: 25px;
+            .header-logo{display: none;}
+            .sendwich-wrap .sendwich:after, .sendwich-wrap .sendwich:before, .sendwich-wrap .sendwich span{background-color: #000;}
+            .sendwich.active{
+                &:before,&:after{background-color: #fff;}
+            }
+        }
         .mbox{position: static;}
         .header-wrap{flex-direction:column;}
 
