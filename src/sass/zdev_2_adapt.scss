@@ -90,6 +90,16 @@
         }
 
     /* smm */ 
+
+    /* clients */ 
+
+        .clients-page .mbox {
+            .top-row {padding-top: 0px;}
+            .tabs-row .disp ul li ul.clients li {width: 50%;}
+            .top-row .after-text {padding-bottom: 18px;}
+        }
+
+    /* clients */
 }
 @media screen and (max-width: 992px){
     /* contacts */
