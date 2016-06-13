@@ -32,6 +32,7 @@
 html{height:100%;}
 body{min-height:100%;width:100%;min-width:640px;font-family:'ProximaNova', arial,sans-serif;background:#fff;color:#3d3d3d;position:relative;font-size: 16px;line-height: 1;
 
+.global-wrapper{overflow: hidden;}
     .fullpage .section{height: 100%;}
 
 
@@ -112,7 +113,7 @@ input, textarea{
 @include font-face('ProximaNova', 'Proxima-Nova-Regular');
 @include font-face('ProximaNova', 'Proxima-Nova-Bold', 700);
 @include font-face('ProximaNova', 'Proxima-Nova-Black', 900);
-@include font-face('ProximaNova', 'Proxima-Nova-Light', 300);
+@include font-face('ProximaNova', 'Proxima Nova Light', 300);
 
 @include font-face('PFAgoraSansPro', 'PFAgoraSansPro-Medium', 500);
 @include font-face('PFAgoraSansPro', 'PFAgoraSansPro-MediumItalic', 500, italic);
