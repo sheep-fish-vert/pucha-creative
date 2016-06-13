@@ -49,6 +49,7 @@
             infinite: true,
             speed: 500,
             fade: true,
+            swipe:false,
             cssEase: 'linear',
             asNavFor:'.name-slider',
             responsive: [
