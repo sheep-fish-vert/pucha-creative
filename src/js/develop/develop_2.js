@@ -15,7 +15,7 @@
                 position: google.maps.ControlPosition.LEFT_BOTTOM // позиция слева внизу для упр елементов
             },
             styles:
-            [{ "featureType": "landscape", "stylers": [{ "saturation": -100 }, { "lightness": 65 }, { "visibility": "on" }] }, { "featureType": "poi", "stylers": [{ "saturation": -100 }, { "lightness": 51 }, { "visibility": "simplified" }] }, { "featureType": "road.highway", "stylers": [{ "saturation": -100 }, { "visibility": "simplified" }] }, { "featureType": "road.arterial", "stylers": [{ "saturation": -100 }, { "lightness": 30 }, { "visibility": "on" }] }, { "featureType": "road.local", "stylers": [{ "saturation": -100 }, { "lightness": 40 }, { "visibility": "on" }] }, { "featureType": "transit", "stylers": [{ "saturation": -100 }, { "visibility": "simplified" }] }, { "featureType": "administrative.province", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "on" }, { "lightness": -25 }, { "saturation": -100 }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }],
+                [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
             disableDefaultUI: true
         };
         map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -44,11 +44,11 @@
         /*/анимация при клике на маркер*/
 
     }
-   
+
 
 /* google map */
 
-/* add content */ 
+/* add content */
 
     function loadMore() {
         $('.button-row a').click(function (event) {
@@ -88,7 +88,7 @@
         });
     }
 
-/* add content */ 
+/* add content */
 
 
 $(document).ready(function () {
@@ -99,6 +99,7 @@ $(document).ready(function () {
         var coordY  = parseFloat($(this).attr('data-coordY')) ;
         var pos2 = new google.maps.LatLng(coordX , coordY);
 
+        //   center: myLatlng,
         map.set('center', pos2);
         map.set('zoom', 16);
 
@@ -111,18 +112,18 @@ $(document).ready(function () {
         infinite: true,
         speed: 500,
         slidesToShow: 1
-    })
+    });
+
 
     $('.tabs-row .topest>ul>li').click(function () {
         $('.tabs-row .topest>ul>li').removeClass('active');
         $(this).addClass('active');
         var current = $(this).index();
         $('.tabs-row .disp>ul>li').removeClass('active');
-        $('.tabs-row .disp>ul>li').eq(current).addClass('active')
+        $('.tabs-row .disp>ul>li').eq(current).addClass('active');
     });
 
-    loadMore();    
-
+    loadMore();
 
     if ($('#map-canvas').length == 1 ) {
          google.maps.event.addDomListener(window, 'load', initialize);
@@ -130,9 +131,6 @@ $(document).ready(function () {
 
 });
 
-$(window).load(function () {
-
-});
 
 $(window).resize(function () {
 

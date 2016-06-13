@@ -157,3 +157,38 @@ $pup:#864ad0;
         }
     }
 }
+
+
+// portfolio-inside
+.portfolio-inside{
+    &.tabs-block .mbox .tabs-row .disp ul li ul li{width: 50%;}
+    .disp{
+        .item{overflow: hidden;position: relative;
+            &:after{background-color: rgba(0,0,0, .65);position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';z-index: 0;transition:all ease-out .2s;opacity: 0;}
+            &:hover{
+                &:after{opacity: 1;}
+                .item-center{transform: translate(-50%, -50%) scale(1);opacity: 1;}
+                .item-text{transform: translateX(0);opacity: 1;}
+            }
+            .item-img{height: 455px;position: relative;
+                img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);min-width: 100%;min-height: 100%;max-width: none;object-fit:contain;}
+            }
+            .item-center{position: absolute;top: 42%;left: 50%;transform: translate(-50%, -50%) scale(.9);text-align: center;opacity: 0;transition:opacity ease-out .3s,transform ease-out .5s;z-index: 2;backface-visibility: hidden;
+
+                .item-center-img{margin-bottom: 19px;}
+            }
+            .item-center-button{
+                &:hover{
+                    a{border-color: $pup;background-color: $pup;}
+                }
+                a{display: flex;text-align: center;width: 140px;height: 40px;text-decoration: none;color: white;font-family: "Roboto";font-weight: 400;font-size: 12px;margin: 0 auto;border:2px solid white;border-radius: 20px;justify-content: center;align-items: center;transition:all ease-out .2s;
+                    span{width: 100%;margin-top: 3px;}
+                }
+            }
+            .item-text{position: absolute;bottom: 40px;left: 40px;color: white;padding-right: 10px;padding-bottom: 10px;transition:opacity ease-out .2s,transform ease-out .3s;z-index: 2;opacity: 0;transform: translateX(-100%);backface-visibility: hidden;
+                b{display: block;font-size: 30px;font-weight: bold;font-family: 'ProximaNova',sans-serif;}
+                span{font-size: 14px;font-family: 'ProximaNova',sans-serif;font-weight: 300;}
+            }
+        }
+    }
+}
