@@ -166,7 +166,7 @@ function headeButer(menuMobile,toggleMenu){
 var fullPageCreated = false;
 
 function fullPage(){
-    if(fullPageCreated === false) {
+    if(fullPageCreated === false && $('.fullpage').length > 0) {
         fullPageCreated = true;
         var header = $('.header').outerHeight();
 
@@ -218,7 +218,7 @@ function fullPage(){
 }
 $(window).resize(function() {
 
-    if ($(window).width() <= 1024) {
+    if ($(window).width() <= 1024 && $('.fullpage').length > 0) {
         fullPageCreated = false;
         $.fn.fullpage.destroy('all');
         $('.header:not(.header-inside)').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
