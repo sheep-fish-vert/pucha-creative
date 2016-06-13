@@ -50,12 +50,35 @@
             speed: 500,
             fade: true,
             cssEase: 'linear',
-            asNavFor:'.name-slider'
+            asNavFor:'.name-slider',
+            responsive: [
+                {
+                  breakpoint: 993,
+                  settings: {
+                    arrows: true
+                  }
+                }
+            ]
         });
 
         $('.slider-fotos-wrap').on('afterChange',function(slick, currentSlide){
             $('.slider-item-descript-wrap').removeClass('active');
             $('.slider-item-descript-wrap').eq(currentSlide.currentSlide).addClass('active');
+
+            if($(window).width < 992){
+
+                $('.name-slider .name-slider-item').removeClass('first-level second-level third-level fourth-level');
+
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').addClass('first-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').prev().addClass('second-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').next().addClass('second-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').prev().prev().addClass('third-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').next().next().addClass('third-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').prev().prev().prev().addClass('fourth-level');
+                $('.name-slider .name-slider-item[data-slick-index='+currentSlide.currentSlide+']').next().next().next().addClass('fourth-level');
+
+            }
+
         });
 
 
@@ -83,7 +106,6 @@
             speed:500,
             centerMode:true,
             vertical:true,
-            verticalSwiping:true,
             slidesToShow:7,
             focusOnSelect: true,
             asNavFor:'.slider-fotos-wrap'
@@ -93,6 +115,7 @@
             nameSliderId = $(this).attr('data-slick-index');
 
             $('.name-slider .name-slider-item').removeClass('first-level second-level third-level fourth-level');
+
             $('.name-slider .name-slider-item[data-slick-index='+nameSliderId+']').addClass('first-level');
             $('.name-slider .name-slider-item[data-slick-index='+nameSliderId+']').prev().addClass('second-level');
             $('.name-slider .name-slider-item[data-slick-index='+nameSliderId+']').next().addClass('second-level');
