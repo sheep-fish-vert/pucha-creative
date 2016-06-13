@@ -59,7 +59,7 @@
 
 
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+   
 
 /* google map */
 
@@ -137,6 +137,11 @@ $(document).ready(function () {
     });
 
     loadMore();    
+
+
+    if ($('#map-canvas').length == 1 ) {
+         google.maps.event.addDomListener(window, 'load', initialize);
+    }
 
 });
 
