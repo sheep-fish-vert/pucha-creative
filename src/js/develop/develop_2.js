@@ -1,6 +1,6 @@
-/* google map */    
+/* google map */
     var map;
-    
+
     function initialize() {
         var cordX = 48.181606;
         var cordY = 69.750934;
@@ -14,7 +14,7 @@
             zoomControlOptions: {
                 position: google.maps.ControlPosition.LEFT_BOTTOM // позиция слева внизу для упр елементов
             },
-            styles: 
+            styles:
                 [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
             disableDefaultUI: true
         };
@@ -57,18 +57,18 @@
 
 
 
-        
+
       }
       google.maps.event.addDomListener(window, 'load', initialize);
 
-/* google map */  
+/* google map */
 
 $(document).ready(function(){
     $('.goto1').click(function(event){
         event.preventDefault();
         map.set('center', pos1);
         map.set('zoom', 16);
-        
+
          //   center: myLatlng,
     });
 
@@ -84,7 +84,7 @@ $(document).ready(function(){
         speed: 500,
         slidesToShow: 1
     })
-      
+
       $('.tabs-row .topest>ul>li').click(function(){
           $('.tabs-row .topest>ul>li').removeClass('active');
           $(this).addClass('active');
@@ -108,7 +108,7 @@ $(document).ready(function(){
                 whatTab: whatTab
             };
 
-            var actionUrl = 'js/json/addcontent.json';
+            var actionUrl = 'js/json/show-portfolio.json';
             $.ajax({
                 url:actionUrl,
                 data:askContent,
@@ -119,23 +119,23 @@ $(document).ready(function(){
                     console.log(res);
                     if (res.isItMoreContent == true){
                         current.closest('.button-row').remove();
-                    }   
+                    }
 
-                    contentInside = res.contentMore ;   
-                    currentBlock.append(contentInside);                   
+                    contentInside = res.contentMore ;
+                    currentBlock.append(contentInside);
                 }
             });
 
-            
-            
-                
+
+
+
 
       });
 
 });
 
 $(window).load(function(){
-    
+
 });
 
 $(window).resize(function(){
