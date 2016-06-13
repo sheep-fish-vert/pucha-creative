@@ -132,7 +132,7 @@ $pup:#864ad0;
     }
 
     // portfolio-inside
-    .portfolio-inside.tabs-block{
+    .portfolio-inside.tabs-block{overflow: hidden;
         .mbox {
             .top-row{padding-top: 0;}
             .tabs-row .topest ul li{line-height: 1;height: auto;text-align: center;padding: 10px 17px;}
