@@ -24,39 +24,24 @@
         /*маркер на svg*/
         var SQUARE_PIN = 'M13,0C5.8,0,0,5.1,0,11.3c0,5.9,11.7,20.9,12.2,21.6L13,34l0.8-1.1C14.3,32.1,26,17.2,26,11.3 C26,5.1,20.2,0,13,0z M13.3,17.2c-3.8,0-7-2.7-7-6.1c0-3.3,3.1-6,7-6s7,2.7,7,6C20.3,14.5,17.2,17.2,13.3,17.2z'
 
-        var marker = new google.maps.Marker({
-            position: pos1,
-            map: map,
-            animation: google.maps.Animation.DROP, // анимация при загрузке карты
-            icon: {                              //маркер на svg
-                path: SQUARE_PIN,
-                fillColor: '#864ad0',
-                fillOpacity: 1,
-                size: new google.maps.Size(24, 36),
-                anchor: new google.maps.Point(12, 36),
-                strokeColor: '#864ad0',
-                strokeWeight: 1
-            },
-        });
-        var marker = new google.maps.Marker({
-            position: pos2,
-            map: map,
-            animation: google.maps.Animation.DROP, // анимация при загрузке карты
-            icon: {                              //маркер на svg
-                path: SQUARE_PIN,
-                fillColor: '#864ad0',
-                fillOpacity: 1,
-                size: new google.maps.Size(24, 36),
-                anchor: new google.maps.Point(12, 36),
-                strokeColor: '#864ad0',
-                strokeWeight: 1
-            },
-        });
+        for (var i = 0; i < pos.length ; i++) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(pos[i][0], pos[i][1]),
+                map: map,
+                animation: google.maps.Animation.DROP, // анимация при загрузке карты
+                icon: {                              //маркер на svg
+                    path: SQUARE_PIN,
+                    fillColor: '#864ad0',
+                    fillOpacity: 1,
+                    size: new google.maps.Size(24, 36),
+                    anchor: new google.maps.Point(12, 36),
+                    strokeColor: '#864ad0',
+                    strokeWeight: 1
+                },
+            });
+        }
 
         /*/анимация при клике на маркер*/
-
-
-
 
     }
 
@@ -107,20 +92,20 @@
 
 
 $(document).ready(function () {
-    $('.goto1').click(function (event) {
+    $('.pointers>ul>li>a').click(function (event) {
         event.preventDefault();
-        map.set('center', pos1);
+
+        var coordX  = parseFloat($(this).attr('data-coordX'));
+        var coordY  = parseFloat($(this).attr('data-coordY')) ;
+        var pos2 = new google.maps.LatLng(coordX , coordY);
+
+        //   center: myLatlng,
+        map.set('center', pos2);
         map.set('zoom', 16);
 
         //   center: myLatlng,
-
     });
 
-    $('.goto2').click(function (event) {
-        event.preventDefault();
-        map.set('center', pos2);
-        map.set('zoom', 16);
-    });
 
     $('.services .top-block .mobile').slick({
         dots: false,

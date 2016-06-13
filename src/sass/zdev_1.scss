@@ -4,7 +4,7 @@
 
         .mbox{max-width: 1306px;}
 
-        .conteiner{width: 100%;padding-top: 112px;}
+        .conteiner{width: 100%;padding-top: 92px;padding-bottom: 20px;}
 
         .our-team-wrap{display: flex;justify-content: space-between;
 
@@ -64,17 +64,27 @@
             }
             .right-column{width: calc(100% - 986px);display: flex;align-items: center;
 
-                .name-slider-wrap{
-                    .name-slider{margin-bottom: 0;color:#fff;font-size: 11px;
-                        .slick-list{height: 300px!important;}
-                        .name-slider-item{max-width: 300px;padding: 10px 0;opacity: .3;font-family: "Roboto", sans-serif;transition:all 300ms ease;
-                            &.slick-current{font-size: 16px;opacity: 1;
+                .name-slider-wrap{position: relative;top:-20px;
+                    .name-slider{margin-bottom: 0;color:#fff;font-size: 16px;
+                        .slick-list{height: 375px!important;}
+                        .slick-track{top:45px;}
+                        .name-slider-item{max-width: 300px;padding: 10px 0;opacity: .3;font-family: "Roboto", sans-serif;display:flex;flex-direction:column;align-items: center;justify-content: flex-start;transform:scale(0.66);transition:all 300ms ease;
+                            &.first-level{opacity: 1;transform:scale(1);
+                                .name-slider-text{
+                                    &:before{opacity: 1;}
+                                }
                                 .name-slider-person{text-decoration: underline;}
                                 .name-slider-descript{opacity: .6;}
                             }
-                            .name-slider-text{display:flex;flex-direction:column;align-items: center;justify-content: flex-start;}
-                            .name-slider-person{transition:all 300ms ease;}
-                            .name-slider-descript{opacity: 0; transition:all 300ms ease;}
+                            &.second-level{opacity: 1;transform:scale(1);}
+                            &.third-level{opacity: .75;transform:scale(.75);}
+                            &.fourth-level{opacity: .5;}
+
+                            .name-slider-text{text-align: center;position: relative;
+                                &:before{content:'';display: block;width: 30px;height: 1px;background-color: #fff;position:absolute;right: calc(100% + 10px);top:50%;opacity: 0;transition:opacity 300ms ease;}
+                            }
+                            .name-slider-person{cursor: pointer;transition:all 300ms ease;}
+                            .name-slider-descript{cursor: pointer;opacity: 0; transition:all 300ms ease;}
                         }
                     }
                 }
