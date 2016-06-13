@@ -221,7 +221,7 @@ $(window).resize(function() {
     if ($(window).width() <= 1024) {
         fullPageCreated = false;
         $.fn.fullpage.destroy('all');
-        $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
+        $('.header:not(.header-inside)').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
     }
     if ($(window).width() > 1024) {
         fullPage();
@@ -254,7 +254,7 @@ function changeViewport(){
 /* DOCUMENT READY  */
 $(document).ready(function() {
     if ($(window).width() <= 1024) {
-        $('.header').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
+        $('.header:not(.header-inside)').css('margin-bottom', "-"+$('.header').outerHeight()+'px');
          setTimeout(function(){
             $('section.main').addClass('show_animate');
         },1000);
