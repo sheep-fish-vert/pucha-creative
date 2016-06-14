@@ -212,7 +212,7 @@ function fullPage(){
         });
 
         $('.scroll-down').click(function(event) {
-            $.fn.fullpage.moveSectionDown();
+            $.fn.fullpage.moveTo(2, 0);
         });
     }
 }
