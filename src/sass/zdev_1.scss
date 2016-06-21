@@ -109,3 +109,24 @@
     }
 
 /* /out-team */
+
+/* inside-graph-design */
+
+    .inside-graph-design{
+
+        .inside-mobile{display: none;}
+
+        .graph-design-row{display: flex;align-items: flex-start;justify-content: space-between;margin-bottom: 25px;
+
+            .graph-design-text{width: calc(50% - 24px);}
+
+            .graph-design-img{width: calc(50% + 12px);
+                .graph-design-img-wrap{height:706px;position: relative;overflow: hidden;
+                    img{position: absolute;max-width:none;min-width: 100%;min-height: 100%;left: 50%;top:50%;transform:translate(-50%, -50%);}
+                }
+            }
+
+        }
+    }
+
+/* /inside-graph-design */
