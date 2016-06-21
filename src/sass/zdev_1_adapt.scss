@@ -1,6 +1,26 @@
 @media screen and (max-width: 1920px){
 
 }
+@media screen and (max-width: 1800px){
+
+    /* inside-graph-design */
+
+        .inside-graph-design{
+
+            .graph-design-row{
+                &:nth-child(odd){
+                    .graph-design-img{margin-right: -10px;}
+                }
+                &:nth-child(even){
+                    .graph-design-img{margin-left: -10px;}
+                }
+            }
+
+        }
+
+    /* /inside-graph-design */
+
+}
 @media screen and (max-width: 1600px){
 
 }
