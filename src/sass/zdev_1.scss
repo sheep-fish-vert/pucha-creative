@@ -116,7 +116,7 @@
 
         .inside-mobile{display: none;}
 
-        .inside-title{padding-top: 50px;margin-bottom: 30px;}
+        .inside-title{margin-bottom: 30px;}
 
         .inside-graph-price{text-align: center;margin-bottom: 40px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd;}
 
@@ -133,13 +133,22 @@
         .inside-graph-text-wrap{font-size: 20px;font-weight: 300;color:#7f7f7f;line-height: 1.25;
             &.graph-inside-wrap-top{margin-bottom: 50px;}
 
-            h6{font-family: 'Roboto', sans-serif;color:#000;font-size: 18px;font-weight: 900;}
+            img{display: block;}
 
-            hr{height: 5px;max-width: 160px;width: 100%;background-color: #864ad0;margin-bottom: 80px;margin-left: 0;}
+            h6{font-family: 'Roboto', sans-serif;color:#000;font-size: 18px;font-weight: 900;margin: 0 0 30px 0;}
+
+            hr{height: 5px;max-width: 160px;width: 100%;background-color: #864ad0;margin-bottom: 50px;margin-left: 0;}
+
+            p{margin: 0 0 25px 0;
+                &:last-child{margin: 0;}
+            }
 
         }
 
         .graph-design-row{display: flex;align-items: flex-start;justify-content: space-between;margin-bottom: 25px;
+            &:first-child{
+                .inside-title{padding-top: 50px;}
+            }
 
             .graph-design-text{width: calc(50% - 50px);}
 
@@ -152,6 +161,16 @@
 
             }
 
+        }
+
+        .graph-inside-center{padding:20px 0 20px 0;display: flex;justify-content: space-between;align-items: flex-start;flex-direction:row-reverse;
+            img{max-width: calc(100% - 160px);}
+            ul{padding:0;margin:0;list-style:none;
+                li{font-family: 'Roboto', sans-serif;font-size: 20px;color:#7f7f7f;font-weight: 700;margin-bottom: 4px;
+                    &:before{content: '-';}
+                    &:last-child{margin-bottom: 0;}
+                }
+            }
         }
     }
 
@@ -173,8 +192,8 @@
     .slide-form{position: relative;
 
         .slide-form-wrap{position: absolute;right: 0;bottom: calc(100% + 5px);width: 306px;background-color: #f2f2f2;padding:37px 35px 20px 35px;display: none;
-            .slide-form-title{font-size: 14px;color:#7a44bd;margin-bottom: 15px;text-transform: uppercase;}
-            p{text-align: center;font-size: 11px;font-weight: 300;margin-bottom: 20px;}
+            .slide-form-title{font-size: 14px;color:#7a44bd;margin-bottom: 15px;text-transform: uppercase;text-align: center;}
+            p{text-align: center;font-size: 11px;font-weight: 300;margin-bottom: 20px;line-height: 1.25;margin: 0 0 20px 0;}
         }
 
         .slide-form-main{
@@ -199,12 +218,17 @@
                     &+.errorText{display: none!important;}
                 }
             }
-            textarea{resize:vertical;padding:10px 12px;min-height: 50px;}
+            textarea{resize:vertical;padding:10px 12px;min-height: 100px;
+                &::-webkit-input-placeholder {line-height: 18px;}
+                &:-moz-placeholder {line-height: 18px;}
+                &::-moz-placeholder {line-height: 18px;}
+                &:-ms-input-placeholder {line-height: 18px;}
+            }
         }
 
         .slide-form-letter{position:relative;width: 32px;height: 32px;background-color: rgba(0, 0, 0, .33);cursor:pointer;transition:all 300ms ease;
-            span{position: absolute;left:50%;top:50%;transform:translate(-50%, -50%);background-image: url(../images/mail-icon-sprite.png);width: 20px;height: 16px;background-position: 0 0;z-index: 0;transition:all 300ms ease;
-                &.mail-icon-hover{background-position: -20px 0;opacity:0;z-index: 1;}
+            span{position: absolute;left:50%;top:50%;transform:translate(-50%, -50%);background-image: url(../images/mail-icon-sprite.png);width: 20px;height: 16px;background-size:auto 100%;background-position: 0 0;z-index: 0;transition:all 300ms ease;
+                &.mail-icon-hover{background-position: -22px 0;opacity:0;z-index: 1;}
             }
             &:hover, &.active{background-color: rgba(0, 0, 0, .66);
                span{opacity: 0;
