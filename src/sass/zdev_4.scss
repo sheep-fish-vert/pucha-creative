@@ -224,9 +224,26 @@ $p:#7a44bd;
     b{font-family: "Roboto";font-weight: 400;}
     .web_row{display: flex;flex-direction: row;align-items: flex-start;justify-content: center;
         .web_item{
-            &.left{width: 49.6%;padding-top: 65px;}
-            &.right{width: 50.4%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;
+            &.left{width: 49.6%;}
+            &.right{width: 50.4%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;position: relative;
                 .inside-create-form{position: absolute;right: 20px;bottom: 20px;}
+            }
+        }
+        &.row_1{
+            .web_item.left{padding-top: 65px;}
+        }
+        &.row_2{align-items: stretch;min-height: 350px;
+            .web_item{
+                &.left{display: flex;align-items: center;justify-content: center;
+                    .inside-title{padding: 0;}
+                }
+                &.right{background-color: #f2f2f2;align-items: flex-start;padding: 35px 20px;
+                    p:first-child{text-transform: uppercase;font-size: 25px;color: #292a3d;font-family: 'ProximaNova', arial,sans-serif;letter-spacing: 1px;margin-bottom: 30px;line-height: 1;
+                        b{font-weight: 900;letter-spacing: 1px;}
+                    }
+                    p{line-height: 1.2;}
+                    span{color: $p;}
+                }
             }
         }
     }
@@ -245,13 +262,13 @@ $p:#7a44bd;
             }
         }
     }
-    .web_item_text{line-height: 1.2;padding-top: 13px;padding-bottom: 42px;}
+    .web_item_text{line-height: 1.2;padding-top: 13px;padding-bottom: 38px;}
     .web_item_items_wrap{display: flex;flex-wrap: wrap;padding-right: 23px;
         .item{width: 50%;display: flex;
             &:nth-child(1),&:nth-child(2){margin-bottom: 36px;}
             .item_img{width: 72px;}
             .item_description{width: calc(100% - 72px);
-                .item_title{font-family: "Roboto";font-size: 15.5px;color: #000000;margin-bottom: 29px;text-transform: uppercase;}
+                .item_title{font-family: "Roboto";font-size: 15.5px;color: #000000;margin-bottom: 24px;text-transform: uppercase;}
                 .item_text{font-family: "Roboto";font-weight: 300;color: #7c7c7c;font-size: 19px;line-height: 1.2;}
             }
         }
