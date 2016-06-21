@@ -118,18 +118,6 @@
 
         .inside-title{margin-bottom: 30px;}
 
-        .inside-graph-price{text-align: center;margin-bottom: 40px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd;}
-
-        .inside-graph-links{display: flex;align-items: center;justify-content: space-around;position: relative;margin-bottom: 45px;
-            &:before{content:'';display: block;width: 3px;height: 100%;background-color: #864ad0;position: absolute;left:50%;top:0;}
-            a{display: block;position:relative;margin: 0 10px;text-transform: uppercase;font-size: 24px;font-family: 'Roboto', sans-serif;font-weight: 300;color:#864ad0;text-decoration: none;padding-bottom: 7px;letter-spacing: -0.1px;
-                &:after{content:'';display: block;position: absolute;bottom:0;left:0;width: 100%;height: 4px;background-image:url(../images/purple-dot.png);transition:all 300ms ease;}
-                &:hover{
-                    &:after{transform:scale(0);}
-                }
-            }
-        }
-
         .inside-graph-text-wrap{font-size: 20px;font-weight: 300;color:#7f7f7f;line-height: 1.25;
             &.graph-inside-wrap-top{margin-bottom: 50px;}
 
@@ -182,6 +170,18 @@
         span{
             &:first-child{font-weight: 300;}
             &:last-child{font-weight: 700;}
+        }
+    }
+
+    .inside-price{text-align: center;margin-bottom: 40px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd;}
+
+    .inside-links{display: flex;align-items: center;justify-content: space-around;position: relative;margin-bottom: 45px;
+        &:before{content:'';display: block;width: 3px;height: 100%;background-color: #864ad0;position: absolute;left:50%;top:0;}
+        a{display: block;position:relative;margin: 0 10px;text-transform: uppercase;font-size: 24px;font-family: 'Roboto', sans-serif;font-weight: 300;color:#864ad0;text-decoration: none;padding-bottom: 7px;letter-spacing: -0.1px;
+            &:after{content:'';display: block;position: absolute;bottom:0;left:0;width: 100%;height: 4px;background-image:url(../images/purple-dot.png);transition:all 300ms ease;}
+            &:hover{
+                &:after{transform:scale(0);}
+            }
         }
     }
 
