@@ -1,6 +1,26 @@
 @media screen and (max-width: 1920px){
 
 }
+@media screen and (max-width: 1800px){
+
+    /* inside-graph-design */
+
+        .inside-graph-design{
+
+            .graph-design-row{
+                &:nth-child(odd){
+                    .graph-design-img{margin-right: -10px;}
+                }
+                &:nth-child(even){
+                    .graph-design-img{margin-left: -10px;}
+                }
+            }
+
+        }
+
+    /* /inside-graph-design */
+
+}
 @media screen and (max-width: 1600px){
 
 }
@@ -106,6 +126,28 @@
         }
 
     /* /third-block */
+
+    /* inside-graph-design */
+
+        .inside-graph-design{
+
+            .graph-design-form{right:calc(50% - 306px);}
+
+
+
+        }
+
+    /* /inside-graph-design */
+
+    /* slide-form */
+
+        .slide-form{
+
+            .slide-form-wrap{bottom:-20px;right:calc(100% + 10px);}
+
+        }
+
+    /* /slide-form */
 
 }
 @media screen and (max-width: 767px){
