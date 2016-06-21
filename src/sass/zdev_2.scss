@@ -273,3 +273,61 @@
     }
 
 /* clients-page */
+
+
+/* kontektsna reclama */
+
+.mb{max-width: 1630px; padding: 0 10px; margin: 0 auto;
+    .top-part{width: 100%; 
+        .l-side{float: left; width: 50%;
+            .title{font-size: 39px; font-family: "ProximaNova"; color: rgb(134, 74, 208);  text-transform: uppercase; line-height: 1.2; font-weight: 300; text-align: center;
+                span{ font-weight: 700;}
+            }
+            .after-text{font-size: 26px; font-family: "ProximaNova"; color: rgba(134, 74, 208, 0.6);text-transform: uppercase; line-height: 1.2; text-align: center; font-weight: 900;}
+            .chooser{ position: relative; width: 100%; display: flex; align-items: center; justify-content: center;
+                a{ display: inline-block; text-decoration: none; border-bottom: 3px dotted #864ad0; font-size: 24px; font-weight: 300; font-family: "Roboto"; color: rgb(134, 74, 208);  text-transform: uppercase; margin-right: 50px; }
+                a:last-child{margin-right: 0px; margin-left: 50px;}
+                &:before{content: ''; position: absolute;  left: calc(50% - 3px/2); top: 0; bottom: 0; background-color: #864ad0; width: 3px;}
+            }
+            .texter{font-size: 20px; font-family: "Roboto"; color: rgb(127, 127, 127);  line-height: 1.2;  text-align: left; font-weight: 300;}
+            .diagram{
+
+            }
+        }
+        .r-side{float: left; width: 50%; position: relative;}
+    }
+    .mid-part{ width: 100%;
+        .title-row{ font-size: 39px; font-family: "ProximaNova"; color: rgb(134, 74, 208);   text-transform: uppercase; font-weight: 300; padding-bottom: 105px;
+            span{font-weight: 700;}
+        }
+        .items-row{ display: flex; justify-content: space-between; align-items: stretch;
+            .item{ width: 30%;  position: relative; min-height: 285px;
+                &:before{content: ''; position: absolute; bottom: 0; left: 0; width: 104px; height: 3px; background-color: #864ad0;}
+                .head{ padding-bottom: 50px; position: relative; padding-left: 80px;
+                    .num{position: absolute; top: 0; left: 0; font-size: 42px; font-family: "Roboto"; color: rgb(204, 204, 204); line-height: 1;}
+                    .top{font-size: 15px; font-family: "Roboto"; font-weight: 500; color: rgb(134, 74, 208); text-transform: uppercase;}
+                    .desk{font-size: 21px; font-family: "Roboto"; color: rgb(18, 18, 18);   line-height: 1.2; text-transform: uppercase;}
+                }
+                .after{font-size: 19px; font-family: "Roboto"; color: rgb(124, 124, 124);   line-height: 1.2; text-align: left; font-weight: 300;}
+            }
+        }        
+    }
+    .bottom-part{
+        .left{ width: 575px; float: left;}
+        .center{width: calc(100% - 575px*2); float: left; text-align: center; position: relative;
+            &:before{content: ''; position: absolute; top: 50%; left: 0; width: calc(50% - 204px/2);height: 3px; background-color:#864ad0;}
+            &:after{content: ''; position: absolute; top: 50%; top: 50%; right: 0; width: calc(50% - 204px/2);height: 3px; background-color:#864ad0; }
+        }
+        .right{ width: 575px;  float: right; position: relative;
+            
+            .cio{float: right;}
+            .pio{ margin-right: 235px;  margin-left: 0px; text-align: right;}
+        }
+
+
+        .cio{ text-align: center; width: 215px; float: left;
+            p{margin: 0; font-size: 119px; font-family: "Roboto"; color: rgba(124, 124, 124, 0.302); line-height: 1.2; font-weight: 900;}
+        }
+        .pio{font-size: 19px; font-family: "Roboto"; font-weight: 300;  color: rgb(124, 124, 124);  line-height: 1.2;  text-align: left; margin-left: 235px;}
+    }
+}
