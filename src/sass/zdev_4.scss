@@ -1,5 +1,6 @@
 /*main section*/
 $pup:#864ad0;
+$p:#7a44bd;
 .main{background-size: cover;background-position: center center;background-repeat: no-repeat;text-align: center;
     p{margin:0;}
     &.show_animate{
@@ -218,3 +219,41 @@ $pup:#864ad0;
 }
 
 // cinside create website
+.inside-create-website{
+    p{margin: 0;font-size: 20px;color: #7f7f7f;font-family: "Roboto";font-weight: 300;}
+    b{font-family: "Roboto";font-weight: 400;}
+    .web_row{display: flex;flex-direction: row;align-items: flex-start;justify-content: center;
+        .web_item{
+            &.left{width: 49.6%;padding-top: 65px;}
+            &.right{width: 50.4%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;
+                .inside-create-form{position: absolute;right: 20px;bottom: 20px;}
+            }
+        }
+    }
+    .inside-title{padding-top: 25px;padding-right: 80px;
+        &+ .web_item_links{padding-right: 82px;}
+    }
+    .web_item_links{color:$p;margin: 0 auto;text-align: center;padding: 40px 0px 46px;
+        a,span{display: inline-block;margin: 0 12px;font-size: 24px;font-family: "Roboto";font-weight: 300;    vertical-align: top;}
+        &>span{font-size: 30px;}
+        a{color:$p;text-decoration: none;text-transform: uppercase;
+            &:hover{
+                span:after{opacity: 0;}
+            }
+            span{position: relative;
+                &:after{position: absolute;bottom: 0;width: 100%;content: '';left: 0;height: 4px;background:transparent url('../images/web_item_links_dot.png') left top;transition:all ease .2s;}
+            }
+        }
+    }
+    .web_item_text{line-height: 1.2;padding-top: 13px;padding-bottom: 42px;}
+    .web_item_items_wrap{display: flex;flex-wrap: wrap;padding-right: 23px;
+        .item{width: 50%;display: flex;
+            &:nth-child(1),&:nth-child(2){margin-bottom: 36px;}
+            .item_img{width: 72px;}
+            .item_description{width: calc(100% - 72px);
+                .item_title{font-family: "Roboto";font-size: 15.5px;color: #000000;margin-bottom: 29px;text-transform: uppercase;}
+                .item_text{font-family: "Roboto";font-weight: 300;color: #7c7c7c;font-size: 19px;line-height: 1.2;}
+            }
+        }
+    }
+}
