@@ -1,6 +1,26 @@
 @media screen and (max-width: 1920px){
 
 }
+@media screen and (max-width: 1632px){
+
+    /* inside-graph-design */
+
+        .inside-graph-design{
+
+            .graph-design-row{
+                &:nth-child(odd){
+                    .graph-design-img{margin-right: -10px;}
+                }
+                &:nth-child(even){
+                    .graph-design-img{margin-left: -10px;}
+                }
+            }
+
+        }
+
+    /* /inside-graph-design */
+
+}
 @media screen and (max-width: 1600px){
 
 }
@@ -106,6 +126,84 @@
         }
 
     /* /third-block */
+
+    /* inside-graph-design */
+
+        .inside-graph-design{
+
+            .inside-title{padding-top: 50px;}
+
+            .graph-design-row{display: block;margin-bottom: 70px;
+
+                &:first-child{
+                    .inside-title{padding-top: 0px;}
+                }
+
+                .graph-design-text, .graph-design-img{width: 100%;}
+                &:nth-child(odd), &:nth-child(even){
+                    .graph-design-img{margin-right: -10px;margin-left:-10px;width: calc(100% + 20px);}
+                }
+                .graph-design-img{
+                    .graph-design-img-wrap{height: 566px;}
+                    .graph-design-form{right:calc(50% - 306px);
+                        .slide-form{
+                            .slide-form-wrap{bottom: 0px;}
+                        }
+                    }
+                }
+            }
+
+            .inside-desktop{display: none;}
+            .inside-mobile{display: block;padding-top: 30px;}
+
+            .inside-graph-text-wrap{
+
+                h6{font-size: 26px;}
+
+            }
+
+            .graph-inside-center{display: block;text-align: center;padding:30px 0 30px 0;
+                img{margin-bottom: 20px;max-width: 100%;}
+                ul{text-align: left;columns:3;max-width: 650px;width: 100%;margin:0 auto;}
+            }
+
+        }
+
+    /* /inside-graph-design */
+
+    /* slide-form */
+
+        .slide-form{
+
+            .slide-form-wrap{bottom:-20px;right:calc(100% + 10px);width: 427px;padding: 55px 45px 30px 45px;
+                .slide-form-title{font-size: 16px;}
+
+                .form_row{margin-bottom: 8px;
+                    &:last-child{margin-bottom: 0;}
+                    &.form_submit{padding-top: 70px;
+                        .button{min-width: 120px;height: 51px;font-size: 16px;}
+                    }
+                }
+
+                p{font-size: 16px;margin: 0 0 30px 0;}
+                input, textarea{height: 50px;padding:0 15px;font-size: 16px;
+                    &::-webkit-input-placeholder {font-size: 16px;}
+                    &:-moz-placeholder {font-size: 16px;}
+                    &::-moz-placeholder {font-size: 16px;}
+                    &:-ms-input-placeholder {font-size: 16px;}
+                }
+                textarea{padding:10px 15px;min-height: 135px;}
+            }
+
+            .slide-form-letter{width: 72px;height: 72px;
+                span{width: 46px;height: 32px;background-size: auto;
+                    &.mail-icon-hover{background-position: -46px 0;}
+                }
+            }
+
+        }
+
+    /* /slide-form */
 
 }
 @media screen and (max-width: 767px){

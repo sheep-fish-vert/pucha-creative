@@ -142,14 +142,27 @@
 
     }
 
-
-
 /* /our-team */
+
+/* slide-form */
+
+    function slideForm(){
+
+        $(document).on('click', '.slide-form-letter', function(){
+
+            $(this).toggleClass('active');
+            $('.slide-form-wrap').stop().slideToggle(300);
+
+        });
+
+    }
+
+/* slide-form */
 
 
 $(document).ready(function(){
 
-
+    slideForm();
 
 });
 

@@ -193,7 +193,7 @@ function popNext(popupId, popupWrap){
 /*маска на инпуте*/
 function Maskedinput(){
     if($('.tel-mask')){
-        $('.tel-mask').mask('+9 (999) 999-99-99 ');
+        $('.tel-mask').mask('+7 (999) 999-99-99 ');
     }
     if($('.tel-mask1')){
         $('.tel-mask1').mask('+9(999)');
@@ -273,8 +273,10 @@ function someAjax(item, someUrl, successFunc, someData){
 
 $(document).ready(function(){
 
-    
+
     validate('.contact', {submitFunction:validationCall});
+
+    validate('.slide-form-main', {submitFunction:validationCall});
 
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    Maskedinput();
