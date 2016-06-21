@@ -116,6 +116,8 @@
 
         .inside-mobile{display: none;}
 
+
+
         .graph-design-row{display: flex;align-items: flex-start;justify-content: space-between;margin-bottom: 25px;
 
             .graph-design-text{width: calc(50% - 24px);}
@@ -130,3 +132,14 @@
     }
 
 /* /inside-graph-design */
+
+/* inside-title */
+
+    .inside-title{text-align: center;font-size: 39px;text-transform: uppercase;margin: 0;font-weight: 400;color:#7a44bd;
+        span{
+            &:first-child{font-weight: 300;}
+            &:last-child{font-weight: 700;}
+        }
+    }
+
+/* /inside-title */
