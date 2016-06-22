@@ -92,6 +92,7 @@
 
 
 $(document).ready(function () {
+
     $('.pointers>ul>li>a').click(function (event) {
         event.preventDefault();
 
@@ -127,6 +128,15 @@ $(document).ready(function () {
 
     if ($('#map-canvas').length == 1 ) {
          google.maps.event.addDomListener(window, 'load', initialize);
+    };
+
+    if ( $('.diagram').length != 0 ){
+        $('.diagram').find('.item').each(function(){
+            var at = $(this).attr('data-percent');
+            setInterval(function(){
+                
+            }, 200)
+        });
     }
 
 });
