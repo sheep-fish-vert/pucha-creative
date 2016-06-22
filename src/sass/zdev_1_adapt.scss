@@ -96,12 +96,17 @@
 
         .inside-graph-design{
 
-            .inside-title{padding-top: 50px;}
+            .inside-title{padding-top: 83px;}
 
             .graph-design-row{display: block;margin-bottom: 70px;
 
                 &:first-child{
-                    .inside-title{padding-top: 15px;}
+                    .inside-title{padding-top: 25px;margin-bottom: 61px;}
+                    .inside-links{margin-bottom: 30px;}
+                }
+                &:last-child{margin-bottom: 65px;
+                    .graph-design-img{height: 559px;}
+                    .inside-title{margin-bottom: 51px;}
                 }
 
                 .graph-design-text, .graph-design-img{width: 100%;}
@@ -110,7 +115,7 @@
                 }
                 .graph-design-img{
                     .graph-design-img-wrap{height: 566px;}
-                    .graph-design-form{right:calc(50% - 306px);
+                    .graph-design-form{right:calc(50% - 300px);bottom:17px;
                         .slide-form{
                             .slide-form-wrap{bottom: 0px;}
                         }
@@ -118,17 +123,21 @@
                 }
             }
 
-            .inside-mobile{padding-top: 30px;}
+            .inside-mobile{padding-top: 105px;
+                hr{margin-bottom: 50px;}
+            }
 
             .inside-graph-text-wrap{
+
+                &.graph-inside-wrap-top{margin-bottom: 64px;}
 
                 h6{font-size: 26px;}
 
             }
 
-            .graph-inside-center{display: block;text-align: center;padding:30px 0 30px 0;
+            .graph-inside-center{display: block;text-align: center;padding:55px 0 76px 0;
                 img{margin-bottom: 20px;max-width: 100%;}
-                ul{text-align: left;columns:3;max-width: 650px;width: 100%;margin:0 auto;}
+                ul{text-align: left;columns:3;max-width: 575px;width: 100%;margin:0 auto;padding-top: 47px;}
             }
 
         }
