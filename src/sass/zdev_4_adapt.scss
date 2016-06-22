@@ -233,6 +233,9 @@ $pup:#864ad0;
 
     // cinside create website
     .inside-create-website{
+        &.black_head{
+            &:after{position: absolute;top: 0;left: 0;content: '';height: 70px;background-color: #000;width: 100%;}
+        }
         p{font-size: 18px;}
         .web_row{
             .web_item{
@@ -269,7 +272,11 @@ $pup:#864ad0;
                 }
             }
             &.row_1{
-                .web_item.left{}
+                .web_item.left{padding-top: 16px;
+                    .inside-title{position: relative;
+
+                    }
+                }
             }
             &.row_2{
                 .web_item{
