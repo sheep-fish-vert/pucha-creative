@@ -1,45 +1,58 @@
 .inside-brendbook{
-	.mbox{
+	.mbox{max-width:1670px;padding:0 0px 0 0px;
 		.brend-book-wrapper{display: flex; flex-wrap: wrap;
 			.brend-book-block1{width: 50%;
 				.same-part{
-					.inside-title{padding-top: 50px;margin-bottom: 30px;}
+					.inside-title{padding: 55px 35px 0 0;margin-bottom: 20px; 					
+					}
 
-			        .inside-graph-price{text-align: center;margin-bottom: 40px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd;}
+			        .inside-graph-price{text-align: center;margin-bottom: 35px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd; padding: 0 0 0 0px;}
 
-			        .inside-graph-links{display: flex;align-items: center;justify-content: space-around;position: relative;margin-bottom: 45px;
-			            &:before{content:'';display: block;width: 3px;height: 100%;background-color: #864ad0;position: absolute;left:50%;top:0;}
-			            a{display: block;position:relative;margin: 0 10px;text-transform: uppercase;font-size: 24px;font-family: 'Roboto', sans-serif;font-weight: 300;color:#864ad0;text-decoration: none;padding-bottom: 7px;letter-spacing: -0.1px;
+			        .inside-graph-links{display: flex;align-items: center;justify-content: center;position: relative;margin-bottom: 48px;
+			            &:before{content:'';display: block;width: 3px;height: 80%;background-color: #864ad0;position: absolute;left:48.3%;top:5px;}
+			            a{display: block;position:relative;margin: 0 50px;text-transform: uppercase;font-size: 26px;font-family: 'Roboto', sans-serif;font-weight: 300;color:#864ad0;text-decoration: none;padding-bottom: 7px;letter-spacing: 1.4px;
 			                &:after{content:'';display: block;position: absolute;bottom:0;left:0;width: 100%;height: 4px;background-image:url(../images/purple-dot.png);transition:all 300ms ease;}
 			                &:hover{
 			                    &:after{transform:scale(0);}
 			                }
 			            }
 			        }
-			        .inside-graph-text-wrap{font-size: 20px;font-weight: 300;color:#7f7f7f;line-height:1.25;
+			        .graph-inside-text-wrap{font-size: 21px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 55px;
             			&.graph-inside-wrap-top{margin-bottom: 50px;}
 					}
 				}
 				.sircle-part{position: relative;
 					.sircle{background-color: rgb(134, 74, 208);opacity: 0.902; border-radius: 50%; position:absolute; 
-						.hedding{ background-color: rgb(0, 0, 0);opacity: 0.8; max-width: 285px; 
-							p{font-family: 'Roboto'; font-size: 35px; color: #fff;
+						.hedding{ background-color: rgb(0, 0, 0);opacity: 0.8; max-width: 285px; position: relative; 
+							p{font-family: 'Roboto'; font-size: 35px; color: #fff; line-height: 1.9; text-align: center; font-weight: 700; letter-spacing: 1.2px;
 								span{color: #864ad0;}
 							}
 						}
-						.sircle-text{width: 190px; margin: 0 auto 0; padding:10px 0 0 0;
-							p{	font-family: 'Roboto'; color: #fff; font-weight: 300;				
+						.sircle-text{width: 210px; margin: 0 auto 0; padding:10px 0px 0 0;
+							p{	font-family: 'Roboto'; color: #fff; font-weight: 300;	font-size: 16px; margin: 5px 0 0 0;	line-height: 1.2; letter-spacing: 1px;	white-space: pre-line; 
 							}
 						}
 					}
-					.sircle1{width: 352px; height: 352px; left: 10%; top: 50px;
-						.heading{}
+					.sircle1{width: 352px; height: 352px; left: 13.5%; top: 0px;
+						.hedding{left: -90px; top: 5px;}
+						.sircle-text{padding:10px 20px 0 0;
+							p{}
+						}
 					}
-					.sircle2{width: 333px; height: 334px; left: 40%; top: 100px;
-						.heading{}
+					.sircle2{width: 333px; height: 334px; left: 49%; top: 40px;
+						.hedding{top: 107px; left:38px;
+							
+						}
+						.sircle-text{width: 210px; padding:10px 10px 0 0;position: relative;bottom: 110px; left: 28px;
+							
+						}
 					}
-					.sircle3{width: 271px; height: 271px; left: 25%; top: 300px;
-						.heading{}
+					.sircle3{width: 271px; height: 271px; left: 33%; top: 260px;
+						.hedding{top: 100px; left:-10px;	min-width: 280px;
+						}
+						.sircle-text{width: 210px; padding:10px 25px 0 0;position: relative;bottom: 120px; left: 23px;
+							
+						}
 					}
 				}		
 			}
@@ -49,11 +62,13 @@
 				}
 				img{display: block; margin: 0 0 0 auto;}
 			}
-			.brend-book-block3{width: 50%; padding: 250px 0 40px 0;
-				.inside-graph-text-wrap{font-size: 20px;font-weight: 300;color:#7f7f7f;line-height:1.25;
+			.brend-book-block3{width: 50%; padding: 220px 0 65px 0;
+				.graph-inside-text-wrap{font-size: 21px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 55px;
             			&.graph-inside-wrap-top{margin-bottom: 50px;}
 					}
-				img{}
+				.image-wrapper{	padding: 0 0 0 55px;
+					img{}
+				}
 			}
 		}
 	}
