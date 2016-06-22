@@ -33,16 +33,7 @@ html{height:100%;}
 body{min-height:100%;width:100%;min-width:640px;font-family:'ProximaNova', arial,sans-serif;background:#fff;color:#3d3d3d;position:relative;font-size: 16px;line-height: 1;
 
 .global-wrapper{overflow: hidden;
-    &.page_inside{
-        .main-page{position: relative;z-index: 10;}
-        .header.header-inside{z-index: 15;height: 0;padding: 0;
-            .header-nav{padding-top: 21px;}
-        }
-        .black_head .mbox{position: relative;}
-        .black_head{
-            &:after{position: absolute;top: 0;left: 0;content: '';height: 70px;background-color: #000;width: 100%;}
-        }
-    }
+
 }
 
     .fullpage .section{height: 100%;}
