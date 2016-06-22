@@ -132,10 +132,19 @@ $(document).ready(function () {
 
     if ( $('.diagram').length != 0 ){
         $('.diagram').find('.item').each(function(){
+            var current = $(this);
             var at = $(this).attr('data-percent');
-            setInterval(function(){
-                
-            }, 200)
+            var count = 0;
+            setInterval(function(){                
+                if ( at > count ){
+                    count++;
+                    console.log(count);
+                    current.find('.text-percent span').html(count+'%');
+                    current.find('.st1').css( {
+                        'stroke-dasharray': Math.PI*(88.5*2)*count/100 +"," + Math.PI*(88.5*2)*(100 - count)/100
+                    });
+                }
+            }, 50)
         });
     }
 
