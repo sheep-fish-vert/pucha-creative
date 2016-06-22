@@ -159,10 +159,23 @@
 
 /* slide-form */
 
+/* inside-smm progress lines */
+
+    function progressLines(){
+
+        $('.inside-smm-progress-bottom').each(function(){
+            $(this).find('span').css({'width': $(this).attr('data-progress')+'%'});
+        });
+
+    }
+
+/* /inside-smm progress lines */
+
 
 $(document).ready(function(){
 
     slideForm();
+    progressLines();
 
 });
 

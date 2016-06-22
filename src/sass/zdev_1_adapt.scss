@@ -153,8 +153,7 @@
                 }
             }
 
-            .inside-desktop{display: none;}
-            .inside-mobile{display: block;padding-top: 30px;}
+            .inside-mobile{padding-top: 30px;}
 
             .inside-graph-text-wrap{
 
@@ -204,6 +203,13 @@
         }
 
     /* /slide-form */
+
+    /* inside-title */
+
+        .inside-desktop{display: none;}
+        .inside-mobile{display: block;}
+
+    /* /inside-title */
 
 }
 @media screen and (max-width: 767px){
