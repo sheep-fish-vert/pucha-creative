@@ -12,11 +12,7 @@ $pup:#864ad0;
     // cinside create website
     .inside-create-website{
         p{font-size: 18px;}
-        .web_row{flex-direction: column;
-            .web_item{
-                &.left{width: 100%;}
-                &.right{width: 100%;}
-            }
+        .web_row{
             &.reverse{
                 &.texting{
                     .web_item{
@@ -29,7 +25,7 @@ $pup:#864ad0;
                     &.left{padding-top: 20px;
                         .inside-title{font-size: 32px;}
                         .web_texting_bottom{
-                            .web_texting_bottom_title{font-size: 21px;
+                            .web_texting_bottom_title{font-size: 21px;}
                             .web_texting_bottom_price{padding: 25px 0 0px;
                                 b{font-size: 22px;}
                             }
@@ -106,7 +102,7 @@ $pup:#864ad0;
             .sendwich-wrap .sendwich:after, .sendwich-wrap .sendwich:before, .sendwich-wrap .sendwich span{/*background-color: #000;*/}
             /*.sendwich.active{
                 &:before,&:after{background-color: #fff;}*/
-            }
+
         }
         .mbox{position: static;}
         .header-wrap{flex-direction:column;}
@@ -246,70 +242,92 @@ $pup:#864ad0;
     }
 
     // cinside create website
-    .inside-create-website{
+    .inside-create-website{padding-bottom: 60px;
         p{font-size: 18px;}
-        .web_row{
+        .web_row{flex-direction: column;
             .web_item{
-                &.left{}
-                &.right{
-                    .inside-create-form{}
+                &.left{width: 100%;}
+                &.right{width: 100%;
+                    .inside-create-form{right: calc(50% - 300px);}
                 }
             }
             &.reverse{
                 &.texting{
                     .web_item{
-                        &.left{}
+                        &.left{padding-left: 0;}
                     }
                 }
             }
-            &.texting{
+            &.texting{flex-direction: column;
                  .web_item{
-                    &.left{
-                        .inside-title{}
-                        .web_texting_description{
-                            &>p{}
-                            ul{}
+                    &.left{padding-top: 82px;
+                        .inside-title{font-size: 36px;margin-bottom: 37px;}
+                        .web_texting_description{padding-right: 0;
+                            &>p{line-height: 1.3;}
+                            ul{padding-left: 23px;margin: 35px 0px;line-height: 1.4;}
                         }
-                        .web_texting_bottom{
-                            .web_texting_bottom_title{
+                        .web_texting_bottom{padding-top: 32px;
+                            .web_texting_bottom_title{font-size: 23px;line-height: 1.2;
                                 span{}
                             }
-                            .web_texting_bottom_price{
-                                b{}
+                            .web_texting_bottom_price{padding: 70px 0 0px;
+                                b{font-size: 25px;}
                             }
-                            .web_item_links{}
+                            .web_item_links{padding: 46px 0px 49px;
+                                a span{font-size: 25px;}
+                            }
                         }
+                    }
+                    &.right{
+                        .web_item_img{margin: 0 -10px;}
                     }
                 }
             }
             &.row_1{
                 .web_item.left{padding-top: 16px;
-                    .inside-title{position: relative;
-
-                    }
+                    .inside-title{position: relative;}
                 }
+                .web_item.right .web_item_img{margin: 0 -10px;}
             }
-            &.row_2{
+            &.row_2{margin: 0 -10px;flex-direction: column-reverse;flex-wrap: wrap;min-height: auto;
                 .web_item{
-                    &.left{
-                        .inside-title{}
+                    &.left{min-height: 285px;
+                        .inside-title{padding-top: 46px;}
                     }
-                    &.right{
-                        p:first-child{}
+                    &.right{padding: 35px 12px;
+                        p:first-child{font-size: 21px;}
+                        .web_item_slider{
+                            .web_item_slider_item_bottom{justify-content: flex-start;padding-top: 35px;
+                                img{display: none;}
+                                span{font-size: 38px;padding-left: 0px;position: relative;padding-right: 150px;
+                                    &:after{width: 84px;left: auto;bottom: 19px;right: 21px;}
+                                }
+                            }
+                            .slick-dots{margin: 0;width: 230px;right: 66px;bottom: 16px;
+                                li{width: 15px;height: 15px;margin: 0 5px;
+                                    button{width: 15px;height: 15px;padding: 7px;
+                                        &:before{font-size: 51px;width: 15px;height: 15px}
+                                    }
+                                }
+                            }
+                            .slick-prev, .slick-next{    border-left: 32px solid #7a44bd;border-top: 18px solid transparent;border-bottom: 18px solid transparent;top: auto;bottom: 6px}
+                            .slick-prev{border-right: 32px solid #7a44bd;border-left: none;right: 297px;}
+                            .slick-next{right: 33px;}
+                        }
                     }
                 }
             }
         }
         .inside-title{padding-top: 0;padding-right: 0px;font-size: 39px;
-            &+ .web_item_links{}
+            &+ .web_item_links{padding-top: 72px;padding-bottom: 54px;}
         }
         .web_item_links{
             a,span{font-size: 22px;}
             &>span{font-size: 26px;}
 
         }
-        .web_item_text{padding-top: 0;padding-bottom: 49px;}
-        .web_item_items_wrap{padding-top: 0;margin-bottom: 65px;
+        .web_item_text{padding-top: 0;padding-bottom: 69px;}
+        .web_item_items_wrap{padding-top: 0;margin-bottom: 56px;
             .item:nth-child(1),.item:nth-child(2){margin-bottom: 25px;}
             .item .item_img{width: 50px;}
             .item .item_description .item_title{font-size: 14px;margin-bottom: 23px;}
