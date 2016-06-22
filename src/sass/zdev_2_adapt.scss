@@ -4,11 +4,49 @@
 @media screen and (max-width: 1600px){
 
 }
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1400px){
+
+    /* КОНТЕКСТНАЯ РЕКЛАМА */ 
+        .mb .bottom-part {
+            .left { width: 510px; }
+            .center{ width: calc(100% - 510px*2);}
+            .right{width: 510px;}
+        }
+    /* КОНТЕКСТНАЯ РЕКЛАМА */ 
 
 }
 @media screen and (max-width: 1280px){
 
+    /* КОНТЕКСТНАЯ РЕКЛАМА */ 
+        .mb {
+            .top-part { 
+                .l-side{float: none; width: 100%; padding-bottom: 88px;}
+                .r-side{float: none; width: 100%; text-align: right;}
+            }
+            .mid-part { 
+                .title-row{text-align: center;}
+                .items-row{display: block; max-width: 640px; margin: 0 auto; padding: 0 30px;
+                    .item{width: 100%; padding-top: 110px; min-height: 475px;
+                        .after {font-size: 25px;}
+                        .head{
+                            .num {font-size: 54px;}
+                            .top{font-size:20px;}
+                            .desk{font-size: 27px;}
+                        }
+                    }
+                }
+            }
+            .bottom-part { padding: 0 30px 75px;
+                .left{ float: none; max-width: 800px; width: 100%; margin: 0 auto; min-height: 240px;}
+                .center{float: none;  max-width: 800px; margin: 0 auto; width: 100%;  padding: 162px 0;
+                    img{display: block; max-width: 210px; margin: 0 auto;}
+                    &:before { content: ''; position: absolute; top: 0; left: calc(50% - 3px); height: 104px; width: 3px; }
+                    &:after { content: ''; position: absolute; bottom: 0; top: auto; left: calc(50% - 3px); height: 104px; width: 3px; }
+                }
+                .right{float: none; float: none;  max-width:800px; margin: 0 auto; width: 100%; min-height: 240px;}
+            }
+        }
+    /* КОНТЕКСТНАЯ РЕКЛАМА */ 
 }
 @media screen and (max-width: 1024px){
 
@@ -100,6 +138,47 @@
         }
 
     /* clients */
+     /* КОНТЕКСТНАЯ РЕКЛАМА */ 
+        .mb { padding: 0;
+            .top-part { 
+                .l-side{
+                    .title{background-color: #050505; padding-top: 35px; padding-bottom: 2px;}
+                    .after-text{ padding-bottom: 32px; padding-top: 45px;}
+                    .texter{padding: 48px 38px 52px;}
+                    .diagram{padding: 0;
+                        .item {
+                            .convert-svg { max-width: 154px;
+                                .text-percent span {font-size: 32px;}
+                            }
+                            .after-text-svg { font-size: 16px; padding-top: 27px;}
+                        }
+                    }
+                }
+                .r-side{
+                    .title-row{padding-top: 45px; padding-bottom: 0;}
+                }
+            }
+            .mid-part { 
+                .title-row{text-align: center; padding-top: 33px; padding-bottom: 0;}
+                .items-row{
+                    .item{
+                        
+                    }
+                }
+            }
+            .bottom-part {
+                .title-hidd{display: block; padding-top: 30px; text-align: center; padding-top: 130px; padding-bottom: 40px;}
+                .left{ min-height: 260px;}
+                .center{
+                    img{display: block; max-width: 210px; margin: 0 auto;}
+                    &:before { content: ''; position: absolute; top: 0; left: calc(50% - 3px); height: 104px; width: 3px; }
+                    &:after { content: ''; position: absolute; bottom: 0; top: auto; left: calc(50% - 3px); height: 104px; width: 3px; }
+                }
+                .right{}
+            }
+        }
+
+    /*  КОНТЕКСТНАЯ РЕКЛАМА */
 }
 @media screen and (max-width: 992px){
     /* contacts */
@@ -125,6 +204,10 @@
             }
         }
     /* contacts */
+
+
+   
+
 }
 @media screen and (max-width: 767px){
 

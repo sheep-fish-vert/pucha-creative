@@ -33,9 +33,33 @@ function portfolioSlider(){
     }
 }
 
+function createWebsiteSlider(){
+  $('.web_item_slider').slick({
+    //autoplay: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide:true,
+    arrows: true,
+    draggable:true,
+    focusOnSelect:false,
+    dots: true,
+    prevArrow:'<button type="button" class="slick-prev"></button>',
+    nextArrow:'<button type="button" class="slick-next"></button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          fade: true
+        }
+      }
+    ]
+  });
+}
 
 $(document).ready(function(){
     portfolioSlider();
+    createWebsiteSlider();
 });
 
 $(window).load(function(){

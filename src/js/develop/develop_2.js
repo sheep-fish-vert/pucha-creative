@@ -92,6 +92,7 @@
 
 
 $(document).ready(function () {
+
     $('.pointers>ul>li>a').click(function (event) {
         event.preventDefault();
 
@@ -127,6 +128,24 @@ $(document).ready(function () {
 
     if ($('#map-canvas').length == 1 ) {
          google.maps.event.addDomListener(window, 'load', initialize);
+    };
+
+    if ( $('.diagram').length != 0 ){
+        $('.diagram').find('.item').each(function(){
+            var current = $(this);
+            var at = $(this).attr('data-percent');
+            var count = 0;
+            setInterval(function(){                
+                if ( at > count ){
+                    count++;
+                    console.log(count);
+                    current.find('.text-percent span').html(count+'%');
+                    current.find('.st1').css( {
+                        'stroke-dasharray': Math.PI*(88.5*2)*count/100 +"," + Math.PI*(88.5*2)*(100 - count)/100
+                    });
+                }
+            }, 50)
+        });
     }
 
 });
