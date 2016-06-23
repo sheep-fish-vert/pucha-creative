@@ -78,12 +78,12 @@
 								}
 							}
 						}
-						.sircle1{width: 332px; height: 332px; left: 4%; top: -10px;
+						.sircle1{width: 332px; height: 332px; left: 5%; top: -10px;
 							.hedding{left: -50px; top: 5px;}
 							.sircle-text{padding:10px 20px 0 0;							
 							}
 						}
-						.sircle2{width: 314px; height: 315px; left: 47%; top: 20px;
+						.sircle2{width: 314px; height: 315px; left: 49%; top: 20px;
 							.hedding{top: 107px; left:38px;							
 							}
 							.sircle-text{width: 210px; padding:10px 10px 0 0;position: relative;bottom: 110px; left: 28px;							
@@ -166,6 +166,23 @@
 	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block4 .left-content-block .wraper-for-sircle:nth-child(2){
 
 		.sircle-for-letter{
+		}
+	}
+	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block1 .same-part .inside-graph-links:before{left: 49.3%;}
+	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block1 .sircle-part .sircle1{
+		.hedding{top: 0px; max-width: 250px;
+			}
+		.sircle-text{padding:0px 0px 0 10px;
+			p{	margin: 5px 0 0 0;	 
+			}
+		}
+	}
+	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block2 .sircle-part .sircle1{
+		.hedding{
+			}
+		.sircle-text{padding:0px 0px 0 10px;
+			p{	margin: 5px 0 0 0;	 
+			}
 		}
 	}
 }
