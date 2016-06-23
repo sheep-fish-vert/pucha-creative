@@ -6,7 +6,7 @@
 					.inside-title{padding: 55px 35px 0 0;margin-bottom: 20px; 				
 					}
 
-			        .inside-graph-price{text-align: center;margin-bottom: 35px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd; padding: 0 0 0 0px;}
+			        .inside-graph-price{text-align: center;margin-bottom: 35px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd; padding: 0 0 0 0px; margin-top: 25px;}
 
 			        .inside-graph-links{display: flex;align-items: center;justify-content: center;position: relative;margin-bottom: 48px;
 			            &:before{content:'';display: block;width: 3px;height: 80%;background-color: #864ad0;position: absolute;left:48.3%;top:5px;}
@@ -17,7 +17,7 @@
 			                }
 			            }
 			        }
-			        .graph-inside-text-wrap{font-size: 21px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 55px;
+			        .graph-inside-text-wrap{font-size: 18px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 55px; text-align: left;
             			&.graph-inside-wrap-top{margin-bottom: 50px;}
 					}
 				}
@@ -98,7 +98,7 @@
 						}						
 					}
 					.wrapper-for-text-content{font-family: 'Roboto', sans-serif; padding: 0 0 0 25px;
-						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2;}
+						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2; white-space: pre-line; }
 						span{ font-weight: bold; color: rgb(56, 32, 85); }
 					}
 				}	
@@ -124,7 +124,7 @@
 						}
 					}
 					.wrapper-for-text-content{ padding: 0 0 0 20px; font-family: 'Roboto', sans-serif;
-						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2;}
+						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2;white-space: pre-line;}
 						span{ font-weight: bold; color: rgb(164, 119, 220); }
 					}
 				}	

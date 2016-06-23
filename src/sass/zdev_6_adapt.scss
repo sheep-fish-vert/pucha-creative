@@ -117,7 +117,7 @@
 							.text-under-sircle{	text-align: center;font-weight: "ProximaNova"; font-weight: 400; font-size: 28px; padding: 27px 0 0 0; 
 							}						
 						}
-						.wrapper-for-text-content{padding: 10px 70px 62px 10px;
+						.wrapper-for-text-content{padding: 10px 35px 62px 35px;
 							p{font-size: 24px;line-height: 1.33;}
 							
 						}
@@ -162,6 +162,11 @@
 	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block1 .sircle-part .sircle1 .hedding{
 	 	p:first-child{display: none;}
 	 	p:last-child{display: block;}
+	}
+	.inside-brendbook .mbox .brend-book-wrapper .brend-book-block4 .left-content-block .wraper-for-sircle:nth-child(2){
+
+		.sircle-for-letter{
+		}
 	}
 }
 @media screen and (max-width: 992px){
