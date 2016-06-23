@@ -57,6 +57,10 @@ img{vertical-align:bottom;border:0;max-width:100%;}
     body .fullpage .section{min-height: 100vh;overflow: hidden;}
 
 }
+@media screen and (max-width: 600px){
+    body .fullpage .section{min-height: auto;}
+
+}
 
 
 
