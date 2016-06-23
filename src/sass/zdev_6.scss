@@ -1,9 +1,9 @@
 .inside-brendbook{
 	.mbox{max-width:1670px;padding:0 0px 0 0px;
-		.brend-book-wrapper{display: flex; flex-wrap: wrap;
-			.brend-book-block1{width: 50%;
+		.brend-book-wrapper{display: flex; flex-wrap: wrap; 
+			.brend-book-block1{width: 50%;min-width: 640px;  
 				.same-part{
-					.inside-title{padding: 55px 35px 0 0;margin-bottom: 20px; 					
+					.inside-title{padding: 55px 35px 0 0;margin-bottom: 20px; 				
 					}
 
 			        .inside-graph-price{text-align: center;margin-bottom: 35px;font-weight: 900;font-size: 26px;text-transform: uppercase;color:#7a44bd; padding: 0 0 0 0px;}
@@ -26,6 +26,7 @@
 						.hedding{ background-color: rgb(0, 0, 0);opacity: 0.8; max-width: 285px; position: relative; 
 							p{font-family: 'Roboto'; font-size: 35px; color: #fff; line-height: 1.9; text-align: center; font-weight: 700; letter-spacing: 1.2px;
 								span{color: #864ad0;}
+
 							}
 						}
 						.sircle-text{width: 210px; margin: 0 auto 0; padding:10px 0px 0 0;
@@ -34,7 +35,10 @@
 						}
 					}
 					.sircle1{width: 352px; height: 352px; left: 13.5%; top: 0px;
-						.hedding{left: -90px; top: 5px;}
+						.hedding{left: -90px; top: 5px;
+							p:last-child{display: none;
+							}
+						}
 						.sircle-text{padding:10px 20px 0 0;
 							p{}
 						}
@@ -56,13 +60,13 @@
 					}
 				}		
 			}
-			.brend-book-block2{width: 50%; position: relative; 
+			.brend-book-block2{width: 50%;min-width: 640px; position: relative; 
 				.brend-book-block2-form{position: absolute;right: 20px;bottom:10px;
 					
 				}
 				img{display: block; margin: 0 0 0 auto;}
 			}
-			.brend-book-block3{width: 50%; padding: 220px 0 65px 0;
+			.brend-book-block3{width: 50%;min-width: 640px; padding: 220px 0 65px 0;
 				.graph-inside-text-wrap{font-size: 21px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 55px;
             			&.graph-inside-wrap-top{margin-bottom: 50px;}
 					}
@@ -70,29 +74,68 @@
 					img{}
 				}
 			}
-			.brend-book-block4{width: 50%; display: flex; flex-wrap: wrap;
-				.right-content-block{ width: 45%;
-					.wraper-for-sicrle{ width: 33%;
-						.sircle-for-letter{border-radius: 50%;background-color: rgb(134, 74, 208);opacity: 0.749;width: 115px;height: 115px;	
-						}
-						.text-under-sircle{	
-						}
-					}
-				}	
-				.left-content-block{width: 45%;display: flex; flex-wrap: wrap;
-					.wraper-for-sircle{width: 33%;
-						.sircle-for-letter{border-radius: 50%;background-color: rgb(134, 74, 208);opacity: 0.749;width: 115px;height: 115px; display: inline-block; line-height: 8;  text-align: center; font-family: "PFAgoraSansPro";
+			.brend-book-block4{width: 50%;min-width: 640px; display: flex; flex-wrap: wrap; padding: 60px 0 0 0; align-items: flex-start;
+				.right-content-block{ width: 50%;display: flex; flex-wrap: wrap;  padding: 0px 0px 0 0px;
+					.wraper-for-sircle{ width: 33%;padding: 0 0px 0 15px; 
+						&:nth-child(2){
+							.text-under-sircle{position: relative; left: -25px;	}
 							
 						}
-						.text-under-sircle{
+						&:nth-child(1){
+							.text-under-sircle{position: relative; left: -10px;	}
+							
+						}
+						&:nth-child(3){
+							
+							.text-under-sircle{position: relative; left: 15px;	}
+							
+						}
+						.sircle-for-letter{border-radius: 50%;background-color: rgb(134, 74, 208);width: 115px;height: 115px; line-height: 2.2;  text-align: center; font-family: 'PT Serif', serif;font-size: 51px; color: #fff; font-weight: bold; position: relative;margin: 0 auto;
+							&:before{content: ""; display: block;  min-width: 90px; min-height: 90px; border-radius: 50%;  border: 2px solid #fff; position: absolute; left: 13px; top: 13px;
+							}
+						}
+						.text-under-sircle{	text-align: center;font-weight: "ProximaNova"; font-weight: 300; font-size: 20px; padding: 27px 0 0 0px; 
+						}						
+					}
+					.wrapper-for-text-content{font-family: 'Roboto', sans-serif; padding: 0 0 0 25px;
+						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2;}
+						span{ font-weight: bold; color: rgb(56, 32, 85); }
+					}
+				}	
+				.left-content-block{width: 50%;display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0px 0px 0 0px;
+					.wraper-for-sircle{width: 33%;						
+						&:nth-child(2){
+							.text-under-sircle{position: relative; left: 0px;	}				
+						}
+						&:nth-child(1){
+							.text-under-sircle{position: relative; left: 0px;	}					
+						}
+						&:nth-child(3){
+							.sircle-for-letter{position: relative; left: 0px;}
+							
+						}
+						.sircle-for-letter{border-radius: 50%;background-color: rgb(134, 74, 208);opacity: 0.749;width: 115px;height: 115px; line-height: 2.2;  text-align: center; font-family: 'PT Serif', serif; font-size: 51px; color: #fff; font-weight: bold; position: relative; margin: 0 auto;
+							&:before{content: ""; display: block;  min-width: 90px; min-height: 90px; border-radius: 50%;  border: 2px solid #fff; position: absolute; left: 13px; top: 13px;
+							}
+							
+						}
+						.text-under-sircle{text-align: center;font-weight: "ProximaNova"; font-weight: 300; font-size: 20px; padding: 27px 0 0 0;
 							
 						}
 					}
+					.wrapper-for-text-content{ padding: 0 0 0 20px; font-family: 'Roboto', sans-serif;
+						p{font-weight: 300; font-size: 18px; color: #7f7f7f; line-height: 1.2;}
+						span{ font-weight: bold; color: rgb(164, 119, 220); }
+					}
 				}	
-				.lower-content-block{
-					.signification1{}
-					.signification2{}
-					.signification3{}
+				.lower-content-block{ padding: 0 0 0px 20px;
+					.signification1{ font-family: 'ProximaNova'; font-weight: 900; font-size: 108px; }
+					.signification2{ font-family: 'ProximaNova'; font-weight: bold; font-size: 108px;}
+					.signification3{font-family: 'ProximaNova'; font-weight: 300; font-size: 108px;}
+					.graph-inside-text-wrap{font-size: 21px;font-weight: 300;color:#7f7f7f;line-height:1.25; font-family: 'Roboto', sans-serif; letter-spacing: 1.2px; padding: 0 0px 0 0px;
+            			&.graph-inside-wrap-top{margin-bottom: 50px;}
+					}
+
 				}		
 			}
 		}
