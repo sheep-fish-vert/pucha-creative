@@ -324,3 +324,32 @@ $p:#7a44bd;
         }
     }
 }
+
+
+
+#call-popup{
+    .slide-form-wrap{position: relative;bottom: auto;right: auto;width: 500px;display: block;
+        .slide-form-title{font-size: 27px;}
+        p{font-size: 18px;}
+        input, textarea{font-size: 16px;height: 41px;
+            &::-webkit-input-placeholder {font-family: 'ProximaNova', sans-serif;font-size: 14px;color:rgba(48, 48, 48, .27);transition:all 300ms ease;}
+            &:-moz-placeholder {font-family: 'ProximaNova', sans-serif;font-size: 14px;color:rgba(48, 48, 48, .27);opacity:1;transition:all 300ms ease;}
+            &::-moz-placeholder {font-family: 'ProximaNova', sans-serif;font-size: 14px;color:rgba(48, 48, 48, .27);opacity:1;transition:all 300ms ease;}
+            &:-ms-input-placeholder {font-family: 'ProximaNova', sans-serif;font-size: 14px;color:rgba(48, 48, 48, .27);transition:all 300ms ease;}
+        }
+        .form_row{
+            &.form_submit{
+                .button{height: 41px;min-width: 150px;font-size: 16px;}
+            }
+        }
+    }
+}
+.fancybox-close{background-image: none;top: 0px;right: 0px;
+    &:after,&:before{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%) rotate(45deg);width: 4px;height: 80%;background-color: $p;content: '';}
+    &:before{transform: translate(-50%, -50%) rotate(-45deg);}
+}
+
+#call_success{text-align: center;padding: 20px;
+    .call-title{font-size: 35px;font-family: 'ProximaNova', sans-serif;color: $p;padding: 20px 10px 20px;font-weight: bold;}
+    .call-subtitle{font-size: 25px;font-family: 'ProximaNova', sans-serif;padding-bottom: 10px;}
+}

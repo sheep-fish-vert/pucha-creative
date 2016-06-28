@@ -117,55 +117,6 @@ function validationCall(form){
     });
 }
 
-/* Отправка формы с файлом */
-/* не использовать input[type="file"] в форме и не забыть дописать форме enctype="multipart/form-data" */
-function validationCallDocument(form){
-
-    var thisForm = $(form);
-    var formData = new FormData($(form)[0]);
-
-    formData.append('file', thisForm.find('input[type=file]')[0].files[0]);
-
-    $.ajax({
-        url: thisForm.attr('action'),
-        type: "POST",
-        data: formData,
-        contentType:false,
-        processData:false,
-        cache:false,
-        success: function(response) {
-            thisForm.trigger("reset");
-            popNext("#call_success", "call-popup");
-        }
-    });
-
-}
-
-/* Отправка формы с файлaми */
-/* не использовать input[type="file"] в форме и не забыть дописать форме enctype="multipart/form-data" */
-function validationCallDocuments(form){
-
-    var thisForm = $(form);
-    var formData = new FormData($(form)[0]);
-
-    $.each(thisForm.find('input[type="file"]')[0].files, function(index, file){
-        formData.append('file['+index+']', file);
-    });
-
-    $.ajax({
-        url: thisForm.attr('action'),
-        type: "POST",
-        data: formData,
-        contentType:false,
-        processData:false,
-        cache:false,
-        success: function(response) {
-            thisForm.trigger("reset");
-            popNext("#call_success", "call-popup");
-        }
-    });
-
-}
 
 function popNext(popupId, popupWrap){
 
@@ -174,6 +125,7 @@ function popNext(popupId, popupWrap){
         fitToView:false,
         wrapCSS:popupWrap,
         autoSize:true,
+        'closeBtn' : false,
         afterClose: function(){
             $('form').trigger("reset");
             clearTimeout(timer);
@@ -279,6 +231,7 @@ $(document).ready(function(){
     validate('.slide-form-main', {submitFunction:validationCall});
 
    validate('#call-popup .contact-form', {submitFunction:validationCall});
+   validate('.slide-form-main-popup', {submitFunction:validationCall});
    Maskedinput();
    fancyboxForm();
 

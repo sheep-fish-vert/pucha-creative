@@ -10,34 +10,39 @@
     </div>
 
     <div id="call-popup">
-        <form action="ajax.php" class="contact-form">
-            <div class="contact-form-title">
-                <h5>Lorem ipsum dolor.</h5>
-            </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
-                        <div class="form_input">
-                            <input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
-                        <div class="form_input">
-                            <input type="text" name="contact_tel" value="" required="required" placeholder="Ваш номер" class="tel-mask">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <button type="submit" class="contact-submit">
-                        <span>Отправить заявку</span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+        <div class="slide-form">
 
+            <div class="slide-form-wrap">
+
+                <div class="slide-form-title">Заказать звонокв</div>
+
+                <p>Прочь сомнения: оставляйте заявку прямо сейчас, и мы свяжемся с Вами в течение 24 часов. </p>
+
+                <form class="slide-form-main-popup" action="ajax.php">
+                    <div class="form_row">
+                        <div class="form_input">
+                            <input type="text" name="user_name" placeholder="ИМЯ" required="required" />
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_input">
+                            <input type="tel" class="tel-mask" name="user_phone" placeholder="+7(  )" required="required" />
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_input">
+                            <textarea name="user_message" placeholder="СООБЩЕНИЕ"></textarea>
+                        </div>
+                    </div>
+                    <div class="form_row form_submit">
+                        <div class="form_input">
+                            <button class="button" type="submit">
+                                <span>Отправить</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
