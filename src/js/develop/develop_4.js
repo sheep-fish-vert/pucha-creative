@@ -44,6 +44,7 @@ function createWebsiteSlider(){
     draggable:true,
     focusOnSelect:false,
     dots: true,
+    adaptiveHeight:false,
     prevArrow:'<button type="button" class="slick-prev"></button>',
     nextArrow:'<button type="button" class="slick-next"></button>',
     responsive: [
@@ -57,7 +58,31 @@ function createWebsiteSlider(){
   });
 }
 
+function spincrementCounter() {
+  if( $('.spincrement-counter' ).length>0){
+    var show = true;
+    $(window).on('scroll load resize', function() {
+      if(!show) return false;
+
+      var sectCount = $('.spincrement-counter');
+
+      if( $(window).scrollTop()+250 >= sectCount.offset().top ){
+        $('.spincrement').each(function(index, el) {
+          $(el).spincrement({
+            duration:2000
+          });
+        });
+        show = false;
+      }
+    });
+  }
+}
+
+
+
 $(document).ready(function(){
+    spincrementAnimationFunc();
+    spincrementCounter();
     portfolioSlider();
     createWebsiteSlider();
 });

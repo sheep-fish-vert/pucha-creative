@@ -141,9 +141,16 @@
                 }
             }
 
-            .graph-design-text{width: calc(50% - 50px);}
+            .graph-design-text{width: calc(50% - 50px);
+                &.animate-it{transform: translateX(100%);opacity: 0;transition:all ease-out .4s;
+                    &.animated{transform: translateX(0%) !important;opacity: 1 !important;}
+                }
+            }
 
             .graph-design-img{width: calc(50% + 12px);position: relative;
+                &.animate-it{transform: translateX(-100%);opacity: 0;transition:all ease-out .4s;
+                    &.animated{transform: translateX(0%) !important;opacity: 1 !important;}
+                }
                 .graph-design-img-wrap{height:706px;position: relative;overflow: hidden;
                     img{position: absolute;max-width:none;min-width: 100%;min-height: 100%;left: 50%;top:50%;transform:translate(-50%, -50%);}
                 }
@@ -220,7 +227,7 @@
                 &:after{content:'';display: block;position: absolute;left:0;bottom:0;width: 105px;height: 3px;background-color: #864ad0;}
             }
             .inside-smm-middle-img{margin-bottom: 35px;height: 65px;}
-            .inside-smm-middle-value{font-size: 54px;color:#333333;font-weight: 900;margin-bottom: 14px;}
+            .inside-smm-middle-value{font-size: 54px;color:#333333;font-weight: 900;margin-bottom: 14px;    min-width: 250px;}
             .inside-smm-middle-text{font-size: 21px;color:#838383;text-transform: uppercase;}
         }
 
@@ -238,7 +245,7 @@
                 .inside-smm-progress{max-width: 640px;width: 100%;margin-bottom: 47px;
                     .inside-smm-progress-top{display: flex;justify-content: space-between;align-items: center;font-size: 16px;font-weight: 300;margin-bottom: 6px;}
                     .inside-smm-progress-bottom{width: 100%;height: 5px;background-color: #1a1c28;position: relative;
-                        span{position: absolute;left:0;top:0;height: 100%;width: 0;background-color: #fff;}
+                        span{position: absolute;left:0;top:0;height: 100%;width: 0;background-color: #fff;transition:all ease 1.2s;}
                     }
                 }
 

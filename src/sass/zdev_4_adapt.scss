@@ -268,7 +268,7 @@ $pup:#864ad0;
                     &.right{padding: 35px 12px;
                         p:first-child{font-size: 21px;}
                         .web_item_slider{
-                            .web_item_slider_item_bottom{justify-content: flex-start;padding-top: 35px;
+                            .web_item_slider_item_bottom{justify-content: flex-start;padding-top: 35px;position: relative;
                                 img{display: none;}
                                 span{font-size: 38px;padding-left: 0px;position: relative;padding-right: 150px;
                                     &:after{width: 84px;left: auto;bottom: 19px;right: 21px;}

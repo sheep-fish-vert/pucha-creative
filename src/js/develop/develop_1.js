@@ -162,11 +162,27 @@
 /* inside-smm progress lines */
 
     function progressLines(){
+        if( $('.spincrement-counter' ).length>0){
+            var show = true;
+            $(window).on('scroll load resize', function() {
+              if(!show) return false;
 
-        $('.inside-smm-progress-bottom').each(function(){
-            $(this).find('span').css({'width': $(this).attr('data-progress')+'%'});
-        });
+              var sectCount = $('.inside-smm-bottom.inside-smm-row');
 
+              if( $(window).scrollTop()+250 >= sectCount.offset().top ){
+                console.info('go');
+                $('.inside-smm-progress-bottom').each(function(){
+                    $(this).find('span').css({'width': $(this).attr('data-progress')+'%'});
+                });
+                $('.spincrement').each(function(index, el) {
+                  $(el).spincrement({
+                    duration:1500
+                  });
+                });
+                show = false;
+              }
+            });
+        }
     }
 
 /* /inside-smm progress lines */

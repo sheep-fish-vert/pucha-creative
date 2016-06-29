@@ -74,6 +74,16 @@
                 method: 'POST',
                 success: function (data) {
                     //var res = JSON.parse(data);
+
+                    // if(typeof data == 'object'){
+                    //     res = data;
+                    // }else{
+                    //     res = JSON.parse(data);
+                    // }
+
+
+
+
                     res = data;
                     console.log(res);
                     if (res.isItMoreContent == true) {
@@ -102,7 +112,7 @@ function serviceSliderTabs(){
                 if( !$('.services .top-block .lister.mobile').hasClass('slick-slider') && $(window).width() <= 1024) {
                   sliker();
                 }
-                if( $(window).width()> 1024 && $('.services .top-block .lister.mobile').is('.slick-initialized') ) {
+                if( $(window).width() > 1024 && $('.services .top-block .lister.mobile').is('.slick-initialized') ) {
                     $('.services .top-block .lister.desctop .item').removeClass('active').eq(0).addClass('active');
                     $('.bot-block-slider .bot-block-item').removeAttr('style');
                     $('.services .top-block .lister.mobile').slick("unslick");
@@ -144,15 +154,17 @@ function serviceSliderTabs(){
 
     // tabs on desctop
     if( $(window).width()>1024 ){
-        $('.bot-block-slider .bot-block-item').not(':first').hide();
+        //$('.bot-block-slider .bot-block-item').not(':first').hide();
+        $('.bot-block-slider .bot-block-item').eq(0).addClass('active');
     }
     if( $(window).width()>1024 ){
         $('.services .top-block .lister.desctop .item').click(function(){
             $('.services .top-block .lister.desctop .item').removeClass('active').eq($(this).index()).addClass('active');
-            $('.bot-block-slider .bot-block-item').hide().eq($(this).index()).fadeIn();
+            $('.bot-block-slider .bot-block-item').removeClass('active').eq($(this).index()).addClass('active');
 
             $('section.services').attr('data-bg', $(this).index()+1);
         }).eq(0).addClass('active');
+
     }
 
 }
@@ -199,7 +211,6 @@ $(document).ready(function () {
             setInterval(function(){
                 if ( at > count ){
                     count++;
-                    console.log(count);
                     current.find('.text-percent span').html(count+'%');
                     current.find('.st1').css( {
                         'stroke-dasharray': Math.PI*(88.5*2)*count/100 +"," + Math.PI*(88.5*2)*(100 - count)/100

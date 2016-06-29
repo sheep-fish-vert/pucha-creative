@@ -102,13 +102,22 @@ $p:#7a44bd;
 }
 .soc-button{
     ul{padding:0;margin: 0;display: flex;list-style-type: none;}
-    li{margin:0 15px;
+    li{margin:0 15px;position: relative;
+        &:nth-child(1) a:after{background-color: #3A5795;}
+        &:nth-child(2) a:after{background-color: #34465D;}
+        &:nth-child(3) a:after{background-color: #235D83;}
+        &:nth-child(4) a:after{background-color: #CC181E;}
+        &:nth-child(5) a:after{background-color: #DC4A38;}
+        &:nth-child(6) a:after{background-color: #54ABEE;}
         &:hover{
-            img{opacity: .6;}
+            img{opacity: 1;}
+            a:after{transform: translate(-50%, -50%) scale(1.7);}
         }
     }
-    a{}
-    img{width: 20px;height: 20px;opacity: .3;transition:all ease .2s;}
+    a{position: relative;display: inline-block;
+        &:after{content: '';position: absolute;height: 100%;width: 100%;left: 50%;top: 50%;transform: translate(-50%, -50%) scale(0);background-color: #fff;z-index: 3;border-radius: 50%;transition:transform ease .2s;}
+    }
+    img{width: 20px;height: 20px;opacity: .3;transition:all ease .2s;position: relative;z-index: 4;}
 }
 
 // portfolio
@@ -222,20 +231,37 @@ $p:#7a44bd;
 }
 
 // cinside create website
-.inside-create-website{
+.inside-create-website{overflow: hidden;
     p{margin: 0;font-size: 20px;color: #7f7f7f;font-family: "Roboto";font-weight: 300;}
     b{font-family: "Roboto";font-weight: 400;}
     .web_row{display: flex;flex-direction: row;align-items: flex-start;justify-content: center;
         .web_item{
-            &.left{width: 50%;}
+            &.left{width: 50%;
+                &.animate-it{transform: translateX(-100%);opacity: 0;transition:all ease-out .4s;
+                    &.animated{transform: translateX(0%) !important;opacity: 1 !important;}
+                }
+            }
             &.right{width: 50%;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;position: relative;
                 .inside-create-form{position: absolute;right: 20px;bottom: 20px;}
+                &.animate-it{transform: translateX(100%);opacity: 0;transition:all ease-out .4s;
+                    &.animated{transform: translateX(0%) !important;opacity: 1 !important;}
+                }
             }
         }
         &.reverse{flex-direction: row-reverse;
             &.texting{
                 .web_item{
                     &.left{padding-left: 65px;}
+                }
+            }
+            .web_item{
+                &.left{
+                    &.animate-it{transform: translateX(100%);}
+
+                }
+                &.right{
+                    &.animate-it{transform: translateX(-100%);}
+
                 }
             }
         }
@@ -276,7 +302,9 @@ $p:#7a44bd;
                     span{color: $p;}
 
                     .web_item_slider{max-width: 100%;margin-bottom: 0;
-                        .web_item_slider_item_bottom{display: flex;align-items: flex-end;justify-content: flex-end;
+                        .web_item_slider_item{position: relative;}
+                        .row_2_title{padding-bottom: 51px;min-height: 227px;}
+                        .web_item_slider_item_bottom{display: flex;align-items: flex-end;justify-content: flex-end;position: absolute;bottom: 0;right: 0;
                             img{margin:0 10px;}
                             span{font-size: 22px;padding-left: 115px;position: relative;
                                 &:after{content: '';position: absolute;width: 100px;height: 2px;background-color: #a9a8ae;left: 0;bottom: 11px;}
@@ -355,4 +383,16 @@ $p:#7a44bd;
 #call_success{text-align: center;padding: 20px;
     .call-title{font-size: 35px;font-family: 'ProximaNova', sans-serif;color: $p;padding: 20px 10px 20px;font-weight: bold;}
     .call-subtitle{font-size: 25px;font-family: 'ProximaNova', sans-serif;padding-bottom: 10px;}
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

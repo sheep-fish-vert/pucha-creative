@@ -39,7 +39,7 @@ function oneHeightItems(){
 }
 
 /*scroll animation*/
-function animationBlock(item){
+function animationBlock(item, someFunctions){
 
     $(window).scroll(function(){
         checkForAnimate();
@@ -65,11 +65,84 @@ function animationBlock(item){
               },200);
 
 
+
+              if(typeof someFunctions == 'function'){
+                    someFunctions();
+              }
+
            }
         });
     }
     checkForAnimate();
 }
+var spincrementAnimation = true;
+
+function sectionAnimFunc(){
+
+    if( $('.section-animate.spincremention') && spincrementAnimation ){
+        spincrementAnimationFunc();
+    }
+}
+
+
+
+function spincrementAnimationFunc(){
+    $('.section-animate.spincremention .spincrement-animate').each(function(index, el) {
+        setTimeout(function(){
+            $(el).spincrement({
+                duration:2000
+            });
+        },900);
+
+    });
+    spincrementAnimation = false;
+}
+
+
+
+function typedAnimation() {
+    if ( $('.section-animate-typed').length > 0 ){
+        var show = true;
+        $(window).on('scroll load resize', function() {
+            if(!show) return false;
+
+            var sectCount = $('.brend-book-block4');
+
+            if( $(window).scrollTop() >= sectCount.offset().top || $(window).scrollTop() + $(window).height() == $(document).height() ){
+                typedAnimationFunc();
+                show = false;
+            }
+        });
+        function typedAnimationFunc(){
+            console.log('123');
+
+            var timerMas = [];
+            var points = [];
+
+            $('.section-animate-typed .animate-typed').each(function(index, el) {
+                var that = $(this);
+                var text = $(el).attr('data-typed');
+                var textLength = text.length;
+                points[index] = 0;
+
+                timerMas[index] = setInterval(function(){
+
+                    that.text(that.text() + text[points[index]]);
+                    points[index]++;
+                    if(points[index]>=textLength){
+                        clearInterval(timerMas[index]);
+                    }
+                }, 90);
+            });
+
+        }
+    }
+
+}
+
+
+
+
 
 /*GO TO href*/
 function goTo(){
@@ -100,33 +173,7 @@ function cutText(){
     });
 };
 
-//bind example
 
-function bindExample(){
-
-    $(document).bind('click', bindFunc);
-
-    function bindFunc(){
-
-        $(document).unbind('click');
-
-        console.log('unbinded');
-
-        $.ajax({
-            url:'ajax.php',
-            method:'POST',
-            success:function(){
-
-                setTimeout(function(){
-                    console.log('binded');
-                    $(document).bind('click', bindFunc);
-                },4000);
-
-            }
-        });
-    };
-
-}
 
 /*header buter*/
 function headeButer(menuMobile,toggleMenu){
@@ -216,6 +263,7 @@ function fullPage(){
         });
     }
 }
+
 $(window).resize(function() {
 
     if ($(window).width() <= 1024 && $('.fullpage').length > 0) {
@@ -251,6 +299,8 @@ function changeViewport(){
 
 }
 
+
+
 /* DOCUMENT READY  */
 $(document).ready(function() {
     if ($(window).width() <= 1024) {
@@ -266,6 +316,9 @@ $(document).ready(function() {
     if ($(window).width() > 1024) {
         fullPage();
     }
+
+    animationBlock($('.section-animate'), sectionAnimFunc);
+    typedAnimation();
 
 });
 
