@@ -7,6 +7,10 @@ $pup:#864ad0;
 }
 @media screen and (max-width: 1366px){
 
+    // cinside create website
+    .inside-create-website.inside-prezentation{
+        .web_row.row_1 .web_item.left .prezentation-steps .prezentation-steps-wrap .item-text p{font-size: 16px;}
+    }
 }
 @media screen and (max-width: 1280px){
     // cinside create website
@@ -306,6 +310,34 @@ $pup:#864ad0;
     }
 
 
+     // cinside create website
+    .inside-create-website.inside-prezentation{
+        .web_row{flex-direction: column;
+            .web_item{
+                &.left{padding-right: 0;}
+
+            }
+            &.row_1{
+                .web_item.left{padding-top: 22px;
+                    .inside-title{margin-bottom: 20px;}
+                }
+                .web_item.right{padding-top: 90px;}
+            }
+             &.row_2{
+                .web_item.left{margin-bottom: 30px;
+                    .prezentation-texting{width: 100%;padding: 0 10px;}
+                    .prezentation-img{margin-bottom: 5px;}
+                }
+                .web_item.right{
+                    p:first-child{font-size: 18px;}
+                    .prezentation-img{display: flex;justify-content: center;}
+                    .prezentation-texting{width: 100%;padding: 0 10px;}
+                }
+            }
+
+        }
+    }
+
 }
 @madia screen and (max-width: 1000px){
     // footer inside
@@ -384,6 +416,38 @@ $pup:#864ad0;
                     img{width: 35px;height: 35px;}
                 }
             }
+        }
+    }
+
+     // cinside create website
+    .inside-create-website.inside-prezentation{
+        .web_row{
+            .web_item{
+                &.left{}
+
+            }
+            &.row_1{
+                .web_item.left{padding-top: 28px;
+                    .inside-title{font-size: 31px;}
+                    .prezentation-steps{padding-top: 25px;
+                        .prezentation-steps-wrap .item-img{max-width: 141px;}
+
+                    }
+                }
+                .web_item.right{padding-top: 123px;}
+            }
+             &.row_2{padding-top: 48px;
+                .web_item.left{
+                    .prezentation-texting{}
+                    .prezentation-img{border:1px solid #b1b1b1;margin-bottom: 30px;}
+                }
+                .web_item.right{
+                    p:first-child{}
+                    .prezentation-img{}
+                    .prezentation-texting{}
+                }
+            }
+
         }
     }
 }
