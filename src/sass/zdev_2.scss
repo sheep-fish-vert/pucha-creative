@@ -27,7 +27,7 @@
 
     .contacts{ background-image: url(../images/contact-bg.jpg); background-size: cover;
 
-        .conteiner{padding-top: 75px;}
+        .conteiner{padding-top: 40px;}
 
         .mbox{max-width: 960px; padding: 0 20px; margin: 0 auto;  text-align: left;
             .top-part{padding-bottom: 15px;}
@@ -42,7 +42,7 @@
             .pointers{ padding-top: 20px;
                 ul{ list-style: none; padding: 0;
                 li{padding-left: 37px; position: relative; padding-top: 10px; padding-bottom: 0px;
-                    a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 14px;   font-style: italic; font-variant: small-caps; line-height: 1.75;
+                    a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 16px;   font-style: italic; font-variant: small-caps; line-height: 1.75;letter-spacing:0.8px;
                         &:before{content: ''; background-image: url(../images/marker.png); width: 24px; height: 30px; background-position: center; position: absolute; left: 0; bottom: 0; }
                     }
 
@@ -57,7 +57,7 @@
                         img{ display: inline-block;}
                         .af{margin: 0; display: inline-block; vertical-align: top; margin-left: 30px;}
                     }
-                    .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.29);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 18px;}
+                    .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.9);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 18px;letter-spacing: 0.4px;}
                 }
                 .form{width: calc(100% - 320px); padding: 37px 44px; border: 3px dotted #864ad0;
                     .contact-form-title{width: 100%; padding-bottom: 20px;

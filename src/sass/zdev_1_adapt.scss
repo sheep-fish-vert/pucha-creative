@@ -47,11 +47,11 @@
                 .slider-block{
                     .slider-fotos{left:340px;}
                     .slider-item-descript{
-                        &:before{width: 135px;top: 172px;}
-                        &:after{left:calc(100% + 134px);height: 65px;top:calc(172px - 65px);}
+                        &:before{width: 135px;top: 205px;}
+                        &:after{left:calc(100% + 134px);height: 65px;top:calc(172px - 31px);}
                     }
                 }
-                .right-column{right:calc(100% - 1140px);}
+                .right-column{right:calc(100% - 1140px);top:calc(50% - 209px);}
             }
         }
 
