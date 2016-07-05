@@ -73,6 +73,7 @@ $p:#7a44bd;
             }
             &>ul{position: absolute;top: calc(100% - 24px);left: -12px;margin:0;padding: 0;list-style-type: none;width: 185px;border:2px solid $p;background-color: #000;padding-top: 37px;padding-left: 10px;padding-right: 10px;opacity: 0;visibility: hidden;z-index: -10;pointer-events: none;transition:all ease-out .2s;transform: scale(.6);
                 li{margin:0;margin-bottom: 12px;}
+                &:after{content: '';position: absolute;top: 10px;right: 10px;border-top: 8px solid white;border-right: 4px solid transparent;border-left: 4px solid transparent;}
             }
         }
         a{text-decoration: none;font-size: 14px;font-family: 'Roboto';font-weight: bold;position: relative;color: white;transition:all ease-out .2s;z-index: 9;
@@ -104,7 +105,7 @@ $p:#7a44bd;
 
 // footer
 .footer{position: fixed;display: block;width: 100%;z-index: 9;color: #fff;left: 0;bottom: 30px;transition:bottom ease-out .2s;
-    &.top{bottom:90px; }
+    &.top{bottom:90px;}
 }
 .soc-button{
     ul{padding:0;margin: 0;display: flex;list-style-type: none;}
