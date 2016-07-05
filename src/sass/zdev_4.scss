@@ -22,7 +22,7 @@ $p:#7a44bd;
         span{letter-spacing: 1.3em;display:block;margin-top: -45px;opacity: 0;animation-duration: 2s;animation-delay: 1.5s;animation-fill-mode: forwards;}
         &.active{}
     }
-    .sub_text{font-size: 21px;color: white;text-transform: uppercase;padding-top: 60px;position: relative;margin-bottom: 58px;transition:all ease-out .7s 1s;opacity: 0;transform: translateY(10%);
+    .sub_text{font-size: 21px;color: white;text-transform: uppercase;padding-top: 15px;position: relative;margin-bottom: 58px;transition:all ease-out .7s 1s;opacity: 0;transform: translateY(10%);
         &:after{content: '';position: absolute;bottom: -24px;background-color: #fff;transform: translateX(-50%);height: 3px;width: 160px;}
     }
     .main_text{color: white;
@@ -147,7 +147,7 @@ $p:#7a44bd;
                 .portfolio-title{font-size: 60px;position: relative;margin-bottom: 60px;display: inline-block;
                     &:after{content: '';position: absolute;width: 104px;height: 3px;background-color: $pup;left: 0px;top: calc(100% + 26px);}
                 }
-                .portfolio-minitext{font-family: "Roboto";font-weight: 300;font-size: 12px;
+                .portfolio-minitext{font-family: "Roboto";font-weight: 300;font-size: 18px;
                     p{margin-bottom: 10px;}
                 }
             }
