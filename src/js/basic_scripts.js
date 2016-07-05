@@ -238,6 +238,7 @@ function fullPage(){
             verticalCentered: true,
             paddingTop: header+"px",
             sectionSelector: '.section',
+            recordHistory: true,
 
             //events
             onLeave: function(index, nextIndex, direction){},

@@ -78,9 +78,27 @@ function spincrementCounter() {
   }
 }
 
+function showTwoLevelMenuOnHeader(){
+  $('.header .header-nav li').hover(function() {
+    $(this).find('>ul').fadeIn(function(){
+      $(this).parent().css('z-index', '10');
+    });
+  }, function() {
+    //$('.header .header-nav li>ul').stop().slideUp();
+  });
+
+  $('.header .header-nav li > ul').hover(function() {
+
+  }, function() {
+    $(this).fadeOut(function(){
+      $(this).parent().css('z-index', '2');
+    });
+  });
+}
 
 
 $(document).ready(function(){
+    //showTwoLevelMenuOnHeader();
     spincrementAnimationFunc();
     spincrementCounter();
     portfolioSlider();

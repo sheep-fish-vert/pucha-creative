@@ -42,14 +42,14 @@
             .pointers{ padding-top: 20px;
                 ul{ list-style: none; padding: 0;
                 li{padding-left: 37px; position: relative; padding-top: 10px; padding-bottom: 0px;
-                    a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 16px;   font-style: italic; font-variant: small-caps; line-height: 1.75;letter-spacing:0.8px;
+                    a{text-decoration: underline; display: inline-block; color: white; font-family: "PFAgoraSansPro", sans-serif; font-weight: 100;font-size: 18px;font-style: italic; font-variant: small-caps; line-height: 1.75;letter-spacing:0.8px;
                         &:before{content: ''; background-image: url(../images/marker.png); width: 24px; height: 30px; background-position: center; position: absolute; left: 0; bottom: 0; }
                     }
 
                 }
                 }
             }
-            .bottom-part{display: flex; align-items: stretch; justify-content: space-between;
+            .bottom-part{display: flex; align-items: stretch; justify-content: space-between;margin-bottom: 20px;
                 .qestion{width: 290px; text-align: left; display: flex; align-items: center; position: relative;
                     &:before{content: ''; position: absolute; left: 30%; right: 30%; height: 7px; top: 30px; background-color: white; }
                     .head{ font-size: 21px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   font-variant: small-caps;  font-weight: 300; line-height: 1.2; padding-bottom: 25px;}
@@ -57,7 +57,7 @@
                         img{ display: inline-block;}
                         .af{margin: 0; display: inline-block; vertical-align: top; margin-left: 30px;}
                     }
-                    .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 0.9);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 18px;letter-spacing: 0.4px;}
+                    .after{font-family: "PFAgoraSansPro", sans-serif; color: rgba(255, 255, 255, 1);  font-style: italic; font-variant: small-caps; line-height: 1.2; font-weight: 100; font-size: 20px;letter-spacing: 0.4px;}
                 }
                 .form{width: calc(100% - 320px); padding: 37px 44px; border: 3px dotted #864ad0;
                     .contact-form-title{width: 100%; padding-bottom: 20px;

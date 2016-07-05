@@ -47,6 +47,9 @@
             }
         }
     /* КОНТЕКСТНАЯ РЕКЛАМА */
+
+    // contacts
+    .contacts .mbox .bottom-part .form{padding: 20px 32px;}
 }
 @media screen and (max-width: 1024px){
 
@@ -100,7 +103,7 @@
                 }
             }
 
-            .bot-block-item{
+            .bot-block-item{transform: none;opacity: 1;height: auto;visibility: visible;
                 &.other{
                     .bot-block{
                         .left-side{
