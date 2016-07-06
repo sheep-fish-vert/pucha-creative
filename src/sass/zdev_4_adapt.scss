@@ -98,7 +98,12 @@ $pup:#864ad0;
         }
     }
 
-    /*header*/
+    /*header*/  
+    
+    .for-main-header{
+        .header .header-getcall{align-self: flex-end; display: block; top: -20px;}
+    }
+    
     .header{position: relative;display: block;padding-top: 23px;
         &.header-inside{padding-top: 22px;padding-bottom: 7px;
             .sendwich-wrap{position: relative;}
