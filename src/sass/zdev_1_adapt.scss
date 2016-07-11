@@ -168,7 +168,7 @@
 
             .inside-smm-middle{flex-wrap:wrap;margin: 0 auto 81px auto;max-width: 540px;width: 100%;
                 .inside-smm-middle-item-wrap{padding-bottom: 51px;}
-                .inside-smm-middle-item{margin-bottom: 125px;
+                .inside-smm-middle-item{margin-bottom: 125px; width: 35%;
                     &:nth-last-child(1), &:nth-last-child(2){margin-bottom: 0;}
                 }
                 .inside-smm-middle-value{margin-bottom: 21px;}
@@ -327,7 +327,7 @@
 }
 @media screen and (max-width: 666px){
     .inside-smm .inside-smm-middle{padding-left: 60px;}
-    .inside-smm .inside-smm-middle .inside-smm-middle-item{width: 40%;}
+    .inside-smm .inside-smm-middle .inside-smm-middle-item{width: 35%;}
 }
 @media screen and (max-width: 479px){
 

@@ -88,6 +88,7 @@
 @media screen and (max-width: 1024px){
 
     /* servises */
+    .services .mbox .bot-block-item.other:last-child .bot-block .right-side .citat{font-size:18px;}
         .services .mbox .top-block .item:hover .after b {background-color: transparent;}
         .services .mbox {opacity: 1; transform: none; visibility: visible;
             .desctop{display: none !important;}
@@ -113,7 +114,7 @@
                         .kappa{width: 50%; font-size: 134px; font-weight: 700; font-family: "Roboto",sans-serif; color: rgb(255, 255, 255); font-weight: bold; margin-left: 30px;}
                     }
                     .call{display: none;}
-                    .citat{max-width: 560px; margin: 0 auto; font-size: 16px; padding-bottom: 20px;}
+                    .citat{max-width: 560px; margin: 0 auto; font-size: 18px; padding-bottom: 20px;}
                     .but-row{justify-content: center;
                         .going-to{
                             span {font-size: 22px;}
@@ -125,7 +126,7 @@
                     .under{
                         .part{ max-width: 260px;
                             .title{font-size: 23px;padding-bottom: 4px;}
-                            .after{ font-size: 13px; }
+                            .after{ font-size: 15px; }
                         }
                     }
                 }
