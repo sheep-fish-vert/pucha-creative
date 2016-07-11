@@ -108,6 +108,7 @@ function validationCall(form){
             if ( data.trim() == 'true') {
                 thisForm.trigger("reset");
                 popNext("#call_success", "call-popup");
+                $('.slide-form-wrap').slideUp();
             }
             else {
                thisForm.trigger('reset');

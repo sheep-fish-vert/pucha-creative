@@ -4,6 +4,38 @@
 @media screen and (max-width: 1600px){
 
 }
+
+@media screen and (min-width: 1299px) and (max-width:1400px){
+     // fix 11.07
+    .services .mbox .bot-block .left-side .citat{font-size: 18px;}
+    .services .mbox .bot-block .right-side .rat{font-size: 260px;}
+
+    .services .mbox .bot-block .right-side .under .part .after{font-size: 16px;line-height: 1.1;}
+    .services .mbox .bot-block .right-side .under .part{max-width: 263px;padding-left: 49px;}
+    .services .mbox .bot-block .left-side .but-row{padding: 26px 0;}
+    .services .mbox .bot-block .left-side .but-row .going-to span{font-size: 18px;}
+
+    .our-team .our-team-wrap .descript{font-size: 21px;}
+    .our-team .our-team-wrap .title-small{font-size: 21px;}
+    .our-team .our-team-wrap .slider-block .slider-item-descript .slider-item-descript-wrap .slider-item-descript-name{font-size: 21px;}
+    .our-team .our-team-wrap .slider-block .slider-item-descript .slider-item-descript-wrap .slider-item-descript-position{font-size: 18px;}
+    .our-team .our-team-wrap .slider-block .slider-item-descript .slider-item-descript-wrap .slider-item-descript-text{font-size: 20px;line-height: 1.3;}
+
+    .our-team .our-team-wrap .right-column .name-slider-wrap .name-slider .name-slider-item .name-slider-text{font-size: 18px;}
+
+
+    .contacts .mbox .sutext{line-height: 1.2;font-size: 18px;}
+    .contacts .mbox .pointers ul{margin:0;}
+    .contacts .mbox .bottom-part .form .contact-form-title h5{font-size: 28px;line-height: 1;}
+    .contacts .mbox .bottom-part .qestion .head{font-size: 28px;padding-bottom: 20px;}
+    .contacts .mbox .bottom-part .qestion .practical .af p{margin: 0;font-size: 20px;}
+    .contacts .mbox .bottom-part .qestion .after{font-size: 23px;line-height: 1;}
+
+    .contacts .mbox .bottom-part .form .contact-form-row .contact-form-item .form_input p{font-size: 19px;margin:0;}
+    .contacts .mbox .bottom-part .form .contact-form-row .contact-form-item .form_input span{font-size: 18px;}
+    .contacts .mbox .bottom-part .form{padding: 24px 32px}
+}
+
 @media screen and (max-width: 1400px){
 
     /* КОНТЕКСТНАЯ РЕКЛАМА */
@@ -13,6 +45,8 @@
             .right{width: 510px;}
         }
     /* КОНТЕКСТНАЯ РЕКЛАМА */
+
+
 
 }
 @media screen and (max-width: 1280px){

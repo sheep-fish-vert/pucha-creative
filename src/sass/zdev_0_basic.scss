@@ -105,6 +105,18 @@ input, textarea{
 
 /*End Layout*/
 
+@supports not( -webkit-clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%) ){
+    .our-team .our-team-wrap .slider-block .slider-background .slider-background-fon{background: url(../images/slider-background-fon-img.png);}
+    .our-team .our-team-wrap .slider-block .slider-background .slider-background-fon .slider-background-fon-main img{display: none;}
+
+    .contacts .mbox .map svg{display: none;}
+    .contacts .mbox .map{margin-top: -50px !important;margin-left: 20px !important;}
+    #map-canvas{height: 250px !important;width: 450px !important;border: 3px solid #864AD0;}
+
+}
+
+
+
 /*fonts*/
 @mixin font-face($style-name, $file:$style-name, $weight:normal, $style:normal) {
     $filepath: "../fonts/" + $file;

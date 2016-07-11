@@ -146,8 +146,8 @@ function typedAnimation() {
 
 /*GO TO href*/
 function goTo(){
-    $('.header-list a').click(function(e){
-        if ($(window).width() <= 1024) {
+    $('.header-list:not(.inside-list) a').click(function(e){
+        if ($(window).width() <= 1024 && $('section.main.section').length>0) {//если мы на главной странице
             e.preventDefault();
             var href = $(this).attr('href');
             href = href.replace(/^#?/,"");
@@ -156,6 +156,26 @@ function goTo(){
             $(scrollerO).animate({scrollTop:target},500);
         }
     });
+
+    function scrollFromInsideLink(){
+        try {
+            if( !$('.header-list.inside-list').length && $(window).width()<=1024){
+                var hash = window.location.hash;
+                hash = hash.replace(/^#?/,"");
+                setTimeout(function(){
+                    var target = $('section.'+hash).offset().top;
+                    $(scrollerO).animate({scrollTop:target},500);
+                },500);
+            }
+        }catch (e){
+            console.error(e.name);
+            console.error(e.message);
+            console.error(e.stack);
+        }finally{
+
+        }
+    }
+    scrollFromInsideLink();
 }
 
 // cut text script
@@ -219,7 +239,7 @@ function fullPage(){
 
         $('.fullpage').fullpage({
             //Navigation
-            menu: '.header-list ol',
+            menu: '.header-list:not(.inside-list) ol',
             anchors:['main', 'services','portfolio','our-team','contacts'],
 
             //Scrolling

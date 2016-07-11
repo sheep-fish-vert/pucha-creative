@@ -35,7 +35,7 @@ function portfolioSlider(){
 
 function createWebsiteSlider(){
   $('.web_item_slider').slick({
-    //autoplay: true,
+    autoplay: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -101,12 +101,12 @@ $(document).ready(function(){
     //showTwoLevelMenuOnHeader();
     spincrementAnimationFunc();
     spincrementCounter();
-    portfolioSlider();
+
     createWebsiteSlider();
 });
 
 $(window).load(function(){
-
+  portfolioSlider();
 });
 
 $(window).resize(function(){
