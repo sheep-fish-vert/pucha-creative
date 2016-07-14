@@ -1,5 +1,5 @@
 <?php
-    $subject = 'Заявка с сайта';
+    $subject = 'Заявка с сайта "КРЕАТИВНОЕ АГЕНСТВО #PUCHA" ';
     $mess = '';
     $mess .= '<hr>';
     if(isset($_POST['info'])) {
@@ -7,19 +7,27 @@
     }
     if(isset($_POST['user_name'])) {
         $name = substr(htmlspecialchars(trim($_POST['user_name'])), 0, 100);
-        $mess .= '<b>Имя:</b>' . $name . '<br>';
+        $mess .= '<b>Имя:</b> ' . $name . '<br>';
     }
     if(isset($_POST['user_phone'])) {
         $tel = substr(htmlspecialchars(trim($_POST['user_phone'])), 0, 100);
-        $mess .= '<b>Телефон:</b>' . $tel . '<br>';
+        $mess .= '<b>Телефон:</b> ' . $tel . '<br>';
+    }
+    if(isset($_POST['user_phone2'])) {
+        $tel2 = substr(htmlspecialchars(trim($_POST['user_phone2'])), 0, 100);
+        $mess .= '<b>Телефон2:</b> ' . $tel2 . '<br>';
+    }
+    if(isset($_POST['user_theme'])) {
+        $theme = substr(htmlspecialchars(trim($_POST['user_theme'])), 0, 100);
+        $mess .= '<b>Тема консультации:</b> ' . $theme . '<br>';
     }
     if(isset($_POST['user_email'])) {
         $mail = substr(htmlspecialchars(trim($_POST['user_email'])), 0, 100);
-        $mess .= '<b>Почта:</b>' . $mail . '<br>';
+        $mess .= '<b>Почта:</b> ' . $mail . '<br>';
     }
     if(isset($_POST['user_message'])) {
         $user_message = substr(htmlspecialchars(trim($_POST['user_message'])), 0, 100);
-        $mess .= '<b>СООБЩЕНИЕ:</b>' . $user_message . '<br>';
+        $mess .= '<b>СООБЩЕНИЕ:</b> ' . $user_message . '<br>';
     }
     $mess .= '<hr>';
     // подключаем файл класса для отправки почты
